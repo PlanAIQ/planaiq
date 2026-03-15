@@ -17,7 +17,7 @@
 <nav id="nav">
   <div class="nav-brand" onclick="showPage('home')">
     <div class="planiq-mark">
-            <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#1e3a8a" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#1e3a8a" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#1e3a8a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg>
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#c0152a" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#c0152a" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#c0152a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg>
     </div>
     <div class="nav-brand-text">
       <div class="nav-brand-wordmark">Plan<span class="iq">IQ</span></div>
@@ -37,8 +37,9 @@
         <a onclick="navToIndustry('energy')"><span class="ind-dot"></span>Energy &amp; Utilities</a>
       </div>
     </li>
-    <li><button onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Services</button></li>
+    <li><button onclick="showPage('services')">Services</button></li>
     <li><button onclick="showPage('home');setTimeout(()=>document.getElementById('about-anchor').scrollIntoView({behavior:'smooth'}),100)">About</button></li>
+    <li><button onclick="showPage('social-proof')">Success Stories</button></li>
     <li><button onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)">Contact</button></li>
     <li class="nav-cta"><a href="javascript:void(0)" onclick="openMail('Free Audit Request','')">Free Audit</a></li>
   </ul>
@@ -49,142 +50,307 @@
 ══════════════════════════════════════════════════ -->
 <div id="page-home" class="page active">
 
-<!-- HERO -->
+<!-- HERO — Single Full-Width Layout -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-tagline fade-up">Business Intelligence &amp; Analytics Consulting</div>
-    <h1 class="hero-h1 fade-up fu-1">Stop Guessing.<br>Start Knowing.</h1>
-    <p class="hero-sub fade-up fu-2">Your data is already telling the story. We translate it into revenue.</p>
-    <p class="hero-desc fade-up fu-2">Fragmented systems, invisible inefficiencies, and gut-feel decisions are costing your business more than you realise. <strong>PlanIQ turns raw operational data into clear dashboards, sharper decisions, and measurable revenue growth</strong> — across every industry we serve.</p>
-    <div class="hero-actions fade-up fu-3" style="align-items:flex-end;gap:2.4rem;">
-      <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-stack">
+  <div class="hero-photo"></div>
+  <div class="hero-bg-accent"></div>
+  <div class="hero-bg-accent2"></div>
+  <div class="hero-content">
+    <h1 class="hero-h1 fade-up fu-1">Stop Guessing. Start Knowing.<br><span class="accent">Your Data Has Answers.</span><br><span style="color:rgba(255,255,255,.85);font-style:normal;">We Help You Use Them.</span></h1>
+    <p class="hero-sub fade-up fu-2">Disconnected systems, hidden inefficiencies, and manual reporting make it difficult to see what's really happening inside your business.</p>
+    <p class="hero-desc fade-up fu-2">PlanIQ helps organisations unify their data, visualise what matters, and uncover opportunities hidden inside everyday operations. <strong>Our analytics solutions turn raw data into actionable insights that drive measurable business growth.</strong></p>
+    <ul class="hero-checklist fade-up fu-3">
+      <li>Connect data across all your business systems</li>
+      <li>Build executive dashboards that reveal what actually drives performance</li>
+      <li>Identify inefficiencies and growth opportunities hidden in your operations</li>
+    </ul>
+    <p class="hero-location fade-up fu-3"><span>Built in Michigan.</span> Serving organisations nationwide.</p>
+    <div class="hero-actions fade-up fu-3">
+      <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-stack on-dark">
         <span class="btn-stack-label">Get a Free Audit</span>
         <div class="btn-stack-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
       </a>
-      <a href="javascript:void(0)" onclick="document.getElementById('industries-anchor').scrollIntoView({behavior:'smooth'})" class="btn btn-outline">Explore Industries</a>
+      <a href="javascript:void(0)" onclick="document.getElementById('industries-anchor').scrollIntoView({behavior:'smooth'})" class="btn btn-outline-white">Explore Industries</a>
+      <a href="javascript:void(0)" onclick="showPage('services')" class="btn btn-outline-white">Our Services</a>
     </div>
     <div class="hero-metrics fade-up fu-4">
       <div class="h-metric"><span class="h-metric-val">$0<em></em></span><div class="h-metric-label">Cost to start — free floor audit</div></div>
-      <div class="h-metric"><span class="h-metric-val">60<em>–90</em></span><div class="h-metric-label">Days to measurable ROI</div></div>
-      <div class="h-metric"><span class="h-metric-val">12<em>hr</em></span><div class="h-metric-label">Guaranteed response time</div></div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-right-img"></div>
-    <div class="hero-right-overlay"></div>
-    <div class="hero-right-content">
-      <div class="hero-right-tag">Live Client Results</div>
-      <div class="hero-right-title">Enterprise-grade data clarity — without the enterprise price tag or the 18-month wait.</div>
-      <div class="hero-kpis">
-        <div class="hkpi"><span class="hkpi-val">30<em>–40%</em></span><div class="hkpi-label">Average cost reduction found in first audit</div></div>
-        <div class="hkpi"><span class="hkpi-val">2<em>–4wk</em></span><div class="hkpi-label">Time to first working dashboard</div></div>
-        <div class="hkpi"><span class="hkpi-val">6<em>+</em></span><div class="hkpi-label">Industries served nationwide</div></div>
-        <div class="hkpi"><span class="hkpi-val">10<em>+yr</em></span><div class="hkpi-label">Combined analytics experience</div></div>
-      </div>
+      <div class="h-metric"><span class="h-metric-val" style="color:#fff;">60<em style="color:#fff;">–90</em></span><div class="h-metric-label">Days to measurable ROI</div></div>
+      <div class="h-metric"><span class="h-metric-val" style="color:#fff;">12<em style="color:#fff;">hr</em></span><div class="h-metric-label">Guaranteed response time</div></div>
     </div>
   </div>
 </section>
 
-<!-- VALUE STRIP -->
-<div class="value-strip">
-  <div class="vs-item"><span class="vs-num">10<em>×</em></span><div class="vs-label">Average return on analytics investment</div><div class="vs-sub">Measured in Year 1</div></div>
-  <div class="vs-item"><span class="vs-num">97<em>%</em></span><div class="vs-label">Clients take action within 30 days</div><div class="vs-sub">Of audit delivery</div></div>
-  <div class="vs-item"><span class="vs-num">12<em>hr</em></span><div class="vs-label">Guaranteed response from our team</div><div class="vs-sub">Every inquiry, every time</div></div>
-  <div class="vs-item"><span class="vs-num">$0<em></em></span><div class="vs-label">Cost for your first audit report</div><div class="vs-sub">No obligation ever</div></div>
-</div>
+<!-- ABOUT PLANIQ INTRO STRIP -->
+<section id="about-anchor" style="background:var(--white);padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=70&fit=crop') center/cover no-repeat;opacity:.03;pointer-events:none;"></div>
+  <div>
+    <div class="overline reveal" style="margin-bottom:1.4rem;">Who We Are</div>
+    <h2 class="headline reveal" style="margin-bottom:1.4rem;">Built in Michigan.<br><em>Trusted Across America.</em></h2>
+    <p class="reveal" style="font-size:1rem;color:#1a3530;line-height:1.82;margin-bottom:1rem;">PlanIQ was founded in <strong>Port Huron, Michigan</strong> by people who understand operations firsthand — not just theory. We built this firm because we kept seeing the same problem everywhere: businesses sitting on mountains of valuable data with no practical way to turn it into decisions.</p>
+    <p class="reveal" style="font-size:1rem;color:#1a3530;line-height:1.82;margin-bottom:1.8rem;">We don't sell expensive platforms or jargon-heavy frameworks. We deliver <strong>practical analytics, clear reporting, and honest consulting</strong> your team can act on from day one. Our goal is always your independence — not your dependency.</p>
+    <div class="reveal" style="display:flex;gap:2rem;padding-top:1.5rem;border-top:1px solid var(--rule);">
+      <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">10<span style="font-style:normal;color:var(--amber);">+</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Years Experience</div></div>
+      <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">6<span style="font-style:normal;color:var(--amber);">+</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Industries Served</div></div>
+      <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">34<span style="font-style:normal;color:var(--amber);">%</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Avg. Cost Reduction</div></div>
+      <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">97<span style="font-style:normal;color:var(--amber);">%</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Client Action Rate</div></div>
+    </div>
+  </div>
+  <div class="reveal" style="position:relative;overflow:hidden;border-radius:4px;">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=90&fit=crop" alt="PlanIQ team" style="width:100%;height:420px;object-fit:cover;border-radius:4px;display:block;"/>
+    <div style="position:absolute;top:28px;right:0;background:var(--teal);color:var(--white);padding:16px 22px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;gap:3px;border-radius:4px 0 0 4px;">
+      <span>Built in</span><strong style="font-size:1.6rem;font-family:var(--font-serif);font-weight:400;font-style:italic;">Michigan</strong>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STRIP removed — stats now in hero metrics and about section -->
+
 
 <!-- FILMSTRIP -->
-<div class="filmstrip">
-  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=85&fit=crop" alt="Analytics dashboard" loading="lazy"/><div class="fs-label">Analytics · Dashboards</div></div>
-  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=85&fit=crop" alt="Manufacturing" loading="lazy"/><div class="fs-label">Manufacturing</div></div>
-  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=85&fit=crop" alt="Retail" loading="lazy"/><div class="fs-label">Retail &amp; E-Commerce</div></div>
-  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=85&fit=crop" alt="Logistics" loading="lazy"/><div class="fs-label">Logistics &amp; Supply Chain</div></div>
+<div class="filmstrip" style="grid-template-columns:repeat(5,1fr);">
+  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=90&fit=crop" alt="Analytics dashboard" loading="lazy"/><div class="fs-label">Analytics · Dashboards</div></div>
+  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=90&fit=crop" alt="Manufacturing" loading="lazy"/><div class="fs-label">Manufacturing</div></div>
+  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=90&fit=crop" alt="Logistics" loading="lazy"/><div class="fs-label">Logistics &amp; Supply Chain</div></div>
+  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=90&fit=crop" alt="Business Intelligence" loading="lazy"/><div class="fs-label">Business Intelligence</div></div>
+  <div class="fs-cell"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=90&fit=crop" alt="Retail" loading="lazy"/><div class="fs-label">Retail &amp; E-Commerce</div></div>
 </div>
 
-<!-- PROBLEM SECTION -->
-<section class="problem">
-  <div class="problem-inner">
-
-    <!-- Left: Problems -->
-    <div class="problem-left">
-      <div class="overline on-dark reveal">The Problem We Solve</div>
-      <h2 class="headline on-dark reveal" style="margin-top:1.2rem;max-width:520px;">Four Expensive Problems Hiding in Plain Sight</h2>
-      <div class="problem-list">
-
-        <div class="problem-item reveal">
-          <div class="problem-num">01</div>
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          </div>
-          <div class="problem-text">
-            <div class="problem-title">Data Trapped in Silos</div>
-            <div class="problem-desc">Your ERP, spreadsheets, and floor records aren't talking to each other. Leadership makes decisions without a complete picture — every single day.</div>
-            <div class="problem-cost">⚠ Avg. $40K/yr in misaligned decisions</div>
-          </div>
-        </div>
-
-        <div class="problem-item reveal">
-          <div class="problem-num">02</div>
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="problem-text">
-            <div class="problem-title">Decisions Running on Stale Data</div>
-            <div class="problem-desc">By the time reports reach the people who need them, the window to act has already closed. Gut feel fills the gap — and it's costing you.</div>
-            <div class="problem-cost">⚠ 2–3 weeks average reporting lag</div>
-          </div>
-        </div>
-
-        <div class="problem-item reveal">
-          <div class="problem-num">03</div>
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <div class="problem-text">
-            <div class="problem-title">Invisible Cost Leaks Draining Margins</div>
-            <div class="problem-desc">Scrap, rework, overstock, and overtime quietly erode margins month after month. Without the right analytics, you can't see them — let alone stop them.</div>
-            <div class="problem-cost">⚠ $30K–$150K recoverable per audit</div>
-          </div>
-        </div>
-
-        <div class="problem-item reveal">
-          <div class="problem-num">04</div>
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div class="problem-text">
-            <div class="problem-title">Every Team Sees a Different Truth</div>
-            <div class="problem-desc">Finance, operations, and sales are all working from different spreadsheets. When the numbers don't match, nothing moves fast — including decisions.</div>
-            <div class="problem-cost">⚠ Avg. 6hrs/week lost reconciling data</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Right: Chart panel -->
-    <div class="problem-right">
-      <div class="problem-chart-card reveal">
-        <div class="chart-eyebrow">Client Results — 12-Month Trajectory</div>
-        <div class="chart-title">Operational Performance Before &amp; After PlanIQ</div>
-        <div class="chart-sub">Average composite score across cost efficiency, reporting speed &amp; decision accuracy</div>
-        <div class="chart-canvas-wrap"><canvas id="homeChart1"></canvas></div>
-        <div class="chart-legend">
-          <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#6b7280"></div>Without analytics</div>
-          <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#1e3a8a"></div>With PlanIQ</div>
-        </div>
-        <div class="chart-insight">
-          Clients who act on PlanIQ audit recommendations within 30 days see a
-          <strong>34% average improvement in operational performance</strong> within the first quarter.
-        </div>
-      </div>
-    </div>
-
+<!-- OUR APPROACH — moved to replace Problem We Solve -->
+<section class="process dark" style="background:var(--slate);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=60&fit=crop') center/cover no-repeat;opacity:.07;pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,13,13,.95) 0%,rgba(40,0,5,.85) 100%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;">
+  <div class="overline on-dark reveal">Our Approach</div>
+  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;">Four Steps from Audit to Intelligence</h2>
+  <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">Four clear steps. No jargon. No hidden fees. We walk the floor before we write a single formula.</p>
+  <div class="process-steps">
+    <div class="step reveal"><div class="step-num">01</div><div class="step-rule"></div><div class="step-title">Listen &amp; Diagnose</div><p class="step-desc">We visit, observe, and ask the right questions. Every engagement starts with understanding your operation — not pitching a solution.</p></div>
+    <div class="step reveal"><div class="step-num">02</div><div class="step-rule"></div><div class="step-title">Connect &amp; Unify</div><p class="step-desc">We connect your siloed systems — ERP, spreadsheets, sensors, CRM — into a single clean data layer that everyone can trust.</p></div>
+    <div class="step reveal"><div class="step-num">03</div><div class="step-rule"></div><div class="step-title">Build &amp; Visualise</div><p class="step-desc">Live dashboards, KPI monitors, and automated reports built around how your team actually works — not how a vendor thinks they should.</p></div>
+    <div class="step reveal"><div class="step-num">04</div><div class="step-rule"></div><div class="step-title">Partner &amp; Scale</div><p class="step-desc">Monthly reviews, system updates, and strategic guidance. We're still here six months after go-live — when the real optimisation work begins.</p></div>
+  </div>
   </div>
 </section>
 
-<!-- SERVICES OVERVIEW -->
-<section class="services-overview" id="services-anchor" style="background:var(--slate);">
+<!-- WHY PLANIQ -->
+<section id="why-anchor" style="background:var(--slate);padding:100px 5%;min-height:200px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=60&fit=crop') center/cover no-repeat;opacity:.06;pointer-events:none;"></div>
+  <div class="overline on-dark reveal">Why PlanIQ</div>
+  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;margin-bottom:52px;">Six Reasons Clients Choose PlanIQ Over Every Other Option</h2>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="why-title">Floor-Level Context</div><div class="why-desc">We start every engagement on-site — not in a slide deck. Every recommendation comes from what we actually observe.</div><div class="why-tagline">No templates. No assumptions.</div></div>
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="why-title">Speed Without Shortcuts</div><div class="why-desc">Live dashboards in 2–4 weeks, measurable ROI in 60–90 days — because we do the hard diagnostic work upfront.</div><div class="why-tagline">Clarity, not complexity.</div></div>
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="why-title">SMB-Priced Intelligence</div><div class="why-desc">Enterprise analytics without the enterprise price tag. Transparent, flat-rate pricing with no surprise invoices.</div><div class="why-tagline">Fair pricing. Real results.</div></div>
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="why-title">Systems That Stick</div><div class="why-desc">We train your team and document everything. You own the system and the knowledge — nothing breaks when we're not there.</div><div class="why-tagline">You own the outcome.</div></div>
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="why-title">Local &amp; Accessible</div><div class="why-desc">Michigan-based, 12-hour response guarantee. We pick up the phone, visit in person, and treat your business like our own.</div><div class="why-tagline">Always reachable.</div></div>
+    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="why-title">Sector-Deep Expertise</div><div class="why-desc">6 industries, 10+ years, hundreds of engagements. We've seen every system, every legacy platform, and every "it's complicated" operation.</div><div class="why-tagline">Depth, not breadth.</div></div>
+  </div>
+</section>
+
+<!-- INDUSTRIES HUB -->
+<section class="industries-hub" id="industries-anchor">
+  <div class="overline on-dark reveal">Industries We Serve</div>
+  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;">Choose Your Industry. See Exactly What We Deliver.</h2>
+  <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">We don't apply generic frameworks. Each engagement is built around the specific data challenges, revenue levers, and operational realities of your industry.</p>
+  <div class="ind-hub-grid">
+    <div class="ind-hub-card reveal" onclick="showPage('manufacturing')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Manufacturing</div>
+        <span class="ind-hub-name">Manufacturing &amp; Industrial</span>
+        <div class="ind-hub-tags">OEE · Predictive Maintenance · Production Analytics</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="ind-hub-card reveal" onclick="showPage('retail')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Retail &amp; E-Commerce</div>
+        <span class="ind-hub-name">Retail &amp; E-Commerce</span>
+        <div class="ind-hub-tags">Sales Analytics · Inventory · Customer Insights</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="ind-hub-card reveal" onclick="showPage('logistics')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Logistics</div>
+        <span class="ind-hub-name">Logistics &amp; Supply Chain</span>
+        <div class="ind-hub-tags">Fleet Analytics · Route Optimisation · KPI Dashboards</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="ind-hub-card reveal" onclick="showPage('technology')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Technology</div>
+        <span class="ind-hub-name">Technology</span>
+        <div class="ind-hub-tags">Product Analytics · Churn · Growth Dashboards</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="ind-hub-card reveal" onclick="showPage('construction')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Construction</div>
+        <span class="ind-hub-name">Construction &amp; Real Estate</span>
+        <div class="ind-hub-tags">Project Tracking · Cost Control · Performance Analytics</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+    <div class="ind-hub-card reveal" onclick="showPage('energy')">
+      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=85&fit=crop')"></div>
+      <div class="ind-hub-veil"></div>
+      <div class="ind-hub-body">
+        <div class="ind-hub-badge">Energy</div>
+        <span class="ind-hub-name">Energy &amp; Utilities</span>
+        <div class="ind-hub-tags">Asset Monitoring · Energy Analytics · Reporting Automation</div>
+        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do / Services moved to Services page -->
+
+<!-- Client Voices moved to Social Proof page -->
+
+
+<!-- ABOUT section moved to top intro -->
+
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-banner-bg"></div>
+  <div>
+    <div class="overline amber">Ready to start?</div>
+    <h2 style="margin-top:1rem;">The Gap Between What You Know and What's Actually Happening Is Costing You More Than You Think.</h2>
+    <p class="cta-sub">Most businesses are running on incomplete information — and the difference between what leadership believes is true and what the data actually shows is where profit quietly disappears. A free PlanIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
+      <span class="btn-tile-label">Start With a Free Audit</span>
+      <div class="btn-tile-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <button class="btn btn-outline-white" onclick="document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'})">Send Us a Message</button>
+  </div>
+</div>
+
+<!-- FAQ moved to Social Proof page -->
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact-anchor">
+  <div class="contact-visual">
+    <div class="contact-visual-img"></div>
+    <div class="contact-visual-overlay"></div>
+    <div class="contact-visual-body">
+      <h3>Let's Talk About Your Business</h3>
+      <div class="c-detail"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Port Huron, Michigan · Serving Nationwide</div></div></div>
+      <div class="c-detail"><div class="c-ico">📞</div><div><div class="c-lbl">Phone</div><div class="c-val">(810) 937-9864</div></div></div>
+      <div class="c-detail"><div class="c-ico">✉️</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')" style="color:rgba(255,255,255,.78);"><span class="__cf_email__" data-cfemail="3d54535b527d4d515c53544c135e5250">[email&#160;protected]</span></a></div></div></div>
+      <a href="javascript:void(0)" onclick="openMail('Book a Consultation','')" class="btn btn-white">Book a Consultation →</a>
+    </div>
+  </div>
+  <div class="contact-form-panel">
+    <h3>Send a Message</h3>
+    <p class="contact-form-tagline">Tell us about your operation — we respond within 12 hours.</p>
+    <div class="form">
+      <div class="form-row"><input class="fi" type="text" placeholder="Your Name"/><input class="fi" type="text" placeholder="Company Name"/></div>
+      <div class="form-row"><input class="fi" type="email" placeholder="Email Address"/><input class="fi" type="tel" placeholder="Phone Number"/></div>
+      <select class="fi">
+        <option value="" disabled selected>Industry / Type of Business</option>
+        <option>Manufacturing</option><option>Retail &amp; E-Commerce</option>
+        <option>Logistics &amp; Supply Chain</option><option>Technology</option>
+        <option>Construction &amp; Real Estate</option><option>Energy &amp; Utilities</option><option>Other</option>
+      </select>
+      <textarea class="fi" placeholder="Describe your biggest data or operational challenge…"></textarea>
+      <button class="form-submit" onclick="submitContactForm()">
+        Submit Message <svg viewBox="0 0 14 14" fill="none" style="width:13px;height:13px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-row">
+        <div class="footer-mark"><svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#fca5a5" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#fca5a5" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#fca5a5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg></div>
+        <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
+      </div>
+      <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
+      <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="javascript:void(0)" onclick="showPage('services')">Data Audit &amp; Assessment</a></li><li><a href="javascript:void(0)" onclick="showPage('services')">KPI Dashboards</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('services')">Cost &amp; Waste Analysis</a></li><li><a href="javascript:void(0)" onclick="showPage('services')">Revenue Analytics</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('services')">Data Migration</a></li><li><a href="javascript:void(0)" onclick="showPage('services')">Staff Training</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('services')">Reporting Automation</a></li><li><a href="javascript:void(0)" onclick="showPage('services')">Strategy Consulting</a></li>
+        <li><a href="javascript:void(0)" onclick="showPage('social-proof')">Success Stories</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Industries</div>
+      <ul class="footer-links">
+        <li><button onclick="showPage('manufacturing')">Manufacturing</button></li>
+        <li><button onclick="showPage('retail')">Retail &amp; E-Commerce</button></li>
+        <li><button onclick="showPage('logistics')">Logistics &amp; Supply Chain</button></li>
+        <li><button onclick="showPage('technology')">Technology</button></li>
+        <li><button onclick="showPage('construction')">Construction &amp; Real Estate</button></li>
+        <li><button onclick="showPage('energy')">Energy &amp; Utilities</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:8109379864">(810) 937-9864</a></li>
+        <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')"><span class="__cf_email__" data-cfemail="60090e060f20100c010e09114e030f0d">[email&#160;protected]</span></a></li>
+        <li><a href="javascript:void(0)">Port Huron, MI</a></li>
+        <li><a href="javascript:void(0)" onclick="openMail('Free Audit Request','')">Start a Free Audit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 PlanIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
+    <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
+  </div>
+</footer>
+
+</div><!-- end page-home -->
+
+
+<!-- ══════════════════════════════════════════════════
+     INDUSTRY PAGE TEMPLATE FUNCTION — rendered by JS
+══════════════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════════════
+     SERVICES PAGE
+══════════════════════════════════════════════════ -->
+<div id="page-services" class="page">
+
+<!-- Page Hero -->
+<section style="background:var(--slate);padding:130px 5% 80px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;"></div>
+  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(192,21,42,.2) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:2;max-width:760px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(192,21,42,.18);border:1px solid rgba(192,21,42,.35);color:#fca5a5;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">What We Do</div>
+    <h1 style="font-family:var(--font-serif);font-size:clamp(2.4rem,4vw,3.6rem);font-weight:400;line-height:1.08;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem;">Twelve Ways We Turn<br><span style="color:var(--amber);font-style:italic;">Data Into Competitive Advantage.</span></h1>
+    <p style="font-size:1.05rem;color:rgba(255,255,255,.78);line-height:1.78;max-width:600px;margin-bottom:2rem;">Every service is built around one goal: giving your team the clarity to make better decisions, win more business, and grow with confidence. All engagements begin with a free audit — no commitment required.</p>
+    <button onclick="showPage('home')" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:10px 22px;font-family:var(--font-sans);font-size:.8rem;font-weight:600;cursor:pointer;border-radius:3px;letter-spacing:.04em;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.6)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='rgba(255,255,255,.75)'">← Back to Home</button>
+  </div>
+</section>
+
+
+<section class="services-overview" style="background:var(--slate);">
   <div class="overline on-dark reveal">What We Do</div>
   <h2 class="headline on-dark reveal" style="margin-top:1.2rem;">Twelve Ways We Turn Your Data Into Competitive Advantage</h2>
   <p class="prose on-dark reveal" style="max-width:580px;margin-top:1rem;">Every service is built around one goal: giving your team the clarity to make better decisions, win more business, and grow with confidence.</p>
@@ -349,237 +515,41 @@
   </div>
 </section>
 
-<!-- INDUSTRIES HUB -->
-<section class="industries-hub" id="industries-anchor">
-  <div class="overline on-dark reveal">Industries We Serve</div>
-  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;">Choose Your Industry. See Exactly What We Deliver.</h2>
-  <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">We don't apply generic frameworks. Each engagement is built around the specific data challenges, revenue levers, and operational realities of your industry.</p>
-  <div class="ind-hub-grid">
-    <div class="ind-hub-card reveal" onclick="showPage('manufacturing')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Manufacturing</div>
-        <span class="ind-hub-name">Manufacturing &amp; Industrial</span>
-        <div class="ind-hub-tags">OEE · Predictive Maintenance · Production Analytics</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ind-hub-card reveal" onclick="showPage('retail')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Retail &amp; E-Commerce</div>
-        <span class="ind-hub-name">Retail &amp; E-Commerce</span>
-        <div class="ind-hub-tags">Sales Analytics · Inventory · Customer Insights</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ind-hub-card reveal" onclick="showPage('logistics')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Logistics</div>
-        <span class="ind-hub-name">Logistics &amp; Supply Chain</span>
-        <div class="ind-hub-tags">Fleet Analytics · Route Optimisation · KPI Dashboards</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ind-hub-card reveal" onclick="showPage('technology')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Technology</div>
-        <span class="ind-hub-name">Technology</span>
-        <div class="ind-hub-tags">Product Analytics · Churn · Growth Dashboards</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ind-hub-card reveal" onclick="showPage('construction')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Construction</div>
-        <span class="ind-hub-name">Construction &amp; Real Estate</span>
-        <div class="ind-hub-tags">Project Tracking · Cost Control · Performance Analytics</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-    <div class="ind-hub-card reveal" onclick="showPage('energy')">
-      <div class="ind-hub-img" style="background-image:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=85&fit=crop')"></div>
-      <div class="ind-hub-veil"></div>
-      <div class="ind-hub-body">
-        <div class="ind-hub-badge">Energy</div>
-        <span class="ind-hub-name">Energy &amp; Utilities</span>
-        <div class="ind-hub-tags">Asset Monitoring · Energy Analytics · Reporting Automation</div>
-        <div class="ind-hub-cta">Explore Industry <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT NUMBERS -->
-<section class="impact">
-  <div class="overline reveal">Proven Impact</div>
-  <h2 class="headline reveal" style="margin-top:1.2rem;">Proof Before You Commit to a Single Dollar</h2>
-  <div class="impact-grid">
-    <div class="impact-card reveal"><span class="impact-num">$150K+</span><div class="impact-label">Losses uncovered per first audit</div><div class="impact-desc">Average hidden inefficiency value identified across all client first-engagement audits in Year 1</div></div>
-    <div class="impact-card reveal"><span class="impact-num">34%</span><div class="impact-label">Mean reduction in operating costs</div><div class="impact-desc">Clients who implement PlanIQ recommendations within the first quarter achieve this on average</div></div>
-    <div class="impact-card reveal"><span class="impact-num">14</span><div class="impact-label">Days to your first working dashboard</div><div class="impact-desc">From signed agreement to live, real-time reporting — a fraction of the typical enterprise timeline</div></div>
-    <div class="impact-card reveal"><span class="impact-num">97%</span><div class="impact-label">Clients who take action within 30 days</div><div class="impact-desc">Of the written audit report delivery — because the findings are clear, costed, and ready to act on</div></div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process">
-  <div class="overline reveal">Our Approach</div>
-  <h2 class="headline reveal" style="margin-top:1.2rem;">Four Steps from Audit to Intelligence</h2>
-  <p class="prose reveal" style="max-width:560px;margin-top:1rem;">Four clear steps. No jargon. No hidden fees. We walk the floor before we write a single formula.</p>
-  <div class="process-steps">
-    <div class="step reveal"><div class="step-num">01</div><div class="step-rule"></div><div class="step-title">Listen &amp; Diagnose</div><p class="step-desc">We visit, observe, and ask the right questions. Every engagement starts with understanding your operation — not pitching a solution.</p></div>
-    <div class="step reveal"><div class="step-num">02</div><div class="step-rule"></div><div class="step-title">Connect &amp; Unify</div><p class="step-desc">We connect your siloed systems — ERP, spreadsheets, sensors, CRM — into a single clean data layer that everyone can trust.</p></div>
-    <div class="step reveal"><div class="step-num">03</div><div class="step-rule"></div><div class="step-title">Build &amp; Visualise</div><p class="step-desc">Live dashboards, KPI monitors, and automated reports built around how your team actually works — not how a vendor thinks they should.</p></div>
-    <div class="step reveal"><div class="step-num">04</div><div class="step-rule"></div><div class="step-title">Partner &amp; Scale</div><p class="step-desc">Monthly reviews, system updates, and strategic guidance. We're still here six months after go-live — when the real optimisation work begins.</p></div>
-  </div>
-</section>
-
-<!-- WHY PLANIQ -->
-<section id="why-anchor" style="background:var(--slate);padding:100px 5%;min-height:200px;">
-  <div class="overline on-dark reveal">Why PlanIQ</div>
-  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;margin-bottom:52px;">Six Reasons Clients Choose PlanIQ Over Every Other Option</h2>
-  <div class="why-grid">
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="why-title">Floor-Level Context</div><div class="why-desc">We start every engagement on-site — not in a slide deck. Every recommendation comes from what we actually observe.</div><div class="why-tagline">No templates. No assumptions.</div></div>
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="why-title">Speed Without Shortcuts</div><div class="why-desc">Live dashboards in 2–4 weeks, measurable ROI in 60–90 days — because we do the hard diagnostic work upfront.</div><div class="why-tagline">Clarity, not complexity.</div></div>
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="why-title">SMB-Priced Intelligence</div><div class="why-desc">Enterprise analytics without the enterprise price tag. Transparent, flat-rate pricing with no surprise invoices.</div><div class="why-tagline">Fair pricing. Real results.</div></div>
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="why-title">Systems That Stick</div><div class="why-desc">We train your team and document everything. You own the system and the knowledge — nothing breaks when we're not there.</div><div class="why-tagline">You own the outcome.</div></div>
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="why-title">Local &amp; Accessible</div><div class="why-desc">Michigan-based, 12-hour response guarantee. We pick up the phone, visit in person, and treat your business like our own.</div><div class="why-tagline">Always reachable.</div></div>
-    <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="why-title">Sector-Deep Expertise</div><div class="why-desc">6 industries, 10+ years, hundreds of engagements. We've seen every system, every legacy platform, and every "it's complicated" operation.</div><div class="why-tagline">Depth, not breadth.</div></div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <div class="overline reveal">Client Voices</div>
-  <h2 class="headline reveal" style="margin-top:1.2rem;">What Clients Say After the First 90 Days</h2>
-  <div class="test-grid">
-    <div class="test-card reveal"><p class="test-quote">"PlanIQ found $80,000 in annual waste in our first audit that we didn't even know existed. That paid for three years of their services in one report."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">RK</div><div><div class="test-name">Randy Kowalski</div><div class="test-role">Plant Manager, Blue Water Stamping</div></div></div></div>
-    <div class="test-card reveal"><p class="test-quote">"Our inventory used to be a guessing game. Now we have live visibility across all three warehouses and reorder happens automatically. Stockouts are gone."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">DT</div><div><div class="test-name">Diane Tompkins</div><div class="test-role">VP Operations, Marysville Fabricators</div></div></div></div>
-    <div class="test-card reveal"><p class="test-quote">"The dashboard PlanIQ built for our sales team increased rep performance by 22% in 60 days. Everyone could finally see the same numbers in real time."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">JM</div><div><div class="test-name">Jim Mulvaney</div><div class="test-role">CEO, Great Lakes Distribution</div></div></div></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-split" id="about-anchor">
-  <div class="about-img">
-    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=90&fit=crop" alt="PlanIQ team" loading="lazy"/>
-    <div class="about-badge"><span>Built in</span><strong>Michigan</strong></div>
-  </div>
-  <div class="about-content">
-    <div class="overline">About PlanIQ</div>
-    <h2 class="headline" style="margin-top:1.2rem;margin-bottom:1.2rem;">Built in Michigan. Trusted Across America.</h2>
-    <p>PlanIQ was founded in <strong>Port Huron, Michigan</strong> by people who understand operations firsthand — not just theory. We built this firm because we kept seeing the same problem: businesses with valuable data, and no way to turn it into decisions.</p>
-    <p style="margin-top:.8rem;">We don't sell expensive platforms or jargon-heavy frameworks. We deliver <strong>practical analytics, clear reporting, and honest consulting</strong> your team can act on from day one. Our goal is always your independence — not your dependency.</p>
-    <div class="kpi-row">
-      <div class="kpi"><span class="kpi-val">10<em>+</em></span><div class="kpi-label">Years experience</div></div>
-      <div class="kpi"><span class="kpi-val">12<em>h</em></span><div class="kpi-label">Response time</div></div>
-      <div class="kpi"><span class="kpi-val">$0<em></em></span><div class="kpi-label">Initial audit</div></div>
-      <div class="kpi"><span class="kpi-val">6<em>+</em></span><div class="kpi-label">Industries served</div></div>
-    </div>
-    <div class="pillars">
-      <div class="pillar"><div class="pillar-title">Our Mission</div><p>To give every business — regardless of size or budget — the business intelligence and analytics capability they need to compete, grow, and stop losing money to decisions made without data.</p></div>
-      <div class="pillar"><div class="pillar-title">Our Reach</div><p>Rooted in Port Huron. Serving clients across Michigan, the Midwest, and nationwide remotely.</p><div class="loc-line"><span class="loc-dot"></span>Port Huron · Michigan · Nationwide Remote Engagements</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
+<!-- CTA at bottom of services page -->
 <div class="cta-banner">
   <div class="cta-banner-bg"></div>
   <div>
     <div class="overline amber">Ready to start?</div>
-    <h2 style="margin-top:1rem;">The Gap Between What You Know and What's Actually Happening Is Costing You More Than You Think.</h2>
-    <p class="cta-sub">Most businesses are running on incomplete information — and the difference between what leadership believes is true and what the data actually shows is where profit quietly disappears. A free PlanIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
+    <h2 style="margin-top:1rem;">Not sure which services apply to your operation? Start with a free audit and we'll tell you exactly what you need.</h2>
+    <p class="cta-sub">Every engagement begins with PlanIQ walking your operation. We map your data, identify the gaps, and recommend only the services that will deliver measurable value for your specific business.</p>
   </div>
   <div class="cta-actions">
-    <a href="javascript:void(0)" onclick="openMail('Free Consultation Request','')" class="btn-tile">
-      <span class="btn-tile-label">Schedule Free Consultation</span>
+    <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
+      <span class="btn-tile-label">Start With a Free Audit</span>
       <div class="btn-tile-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
     </a>
-    <button class="btn btn-outline-white" onclick="document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'})">Send a Message</button>
+    <button class="btn btn-outline-white" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)">Send Us a Message</button>
   </div>
 </div>
 
-<!-- FAQ -->
-<section class="faq">
-  <div class="faq-left reveal">
-    <div class="overline" style="margin-bottom:1.2rem;">FAQ</div>
-    <h2 class="headline">Questions We Get Asked Every Week</h2>
-    <p>Straight answers about what we do, how it works, and what you can expect.</p>
-    <a href="javascript:void(0)" onclick="document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'})" class="btn btn-primary" style="margin-top:1.4rem;">Ask Us Directly <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
-  <div>
-    <div class="faq-list">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does the free audit actually include? <span class="faq-plus">+</span></button><div class="faq-a">We visit your operation, walk the floor, interview key staff, and map how data flows through your business. We then deliver a written report identifying your top 3–5 data challenges, their estimated cost impact, and a clear recommended action plan. No sales pitch. No obligation.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly will we see results? <span class="faq-plus">+</span></button><div class="faq-a">First working dashboards typically go live within 2–4 weeks. Measurable operational improvements — cost reduction, efficiency gains, revenue visibility — emerge within 60–90 days of a full implementation.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you work with our existing systems? <span class="faq-plus">+</span></button><div class="faq-a">Yes. We specialize in connecting legacy systems, ERP platforms, spreadsheets, CRM tools, and paper-based processes into a unified data layer. We work with what you have — you don't need to replace anything to work with us.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does it cost beyond the free audit? <span class="faq-plus">+</span></button><div class="faq-a">Every engagement is scoped and priced transparently before any work begins. We offer project-based pricing for one-off deliverables and monthly retainer plans for ongoing partnership. There are no hidden fees, no scope creep charges, and no surprises.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you work with companies outside Michigan? <span class="faq-plus">+</span></button><div class="faq-a">Absolutely. While our roots are in Port Huron and the Blue Water area, we serve clients nationwide. Many engagements are fully remote — particularly for technology, retail, and logistics clients. For manufacturing and construction, we do prefer an in-person visit for the initial audit.</div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens after the project is delivered? <span class="faq-plus">+</span></button><div class="faq-a">We offer monthly partner plans that include system check-ins, data quality maintenance, reporting updates, priority support, and quarterly strategy reviews. We also provide full documentation and training so your team is self-sufficient — we're a long-term partner, not a dependency.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact-anchor">
-  <div class="contact-visual">
-    <div class="contact-visual-img"></div>
-    <div class="contact-visual-overlay"></div>
-    <div class="contact-visual-body">
-      <h3>Let's Talk About Your Business</h3>
-      <div class="c-detail"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Port Huron, Michigan · Serving Nationwide</div></div></div>
-      <div class="c-detail"><div class="c-ico">📞</div><div><div class="c-lbl">Phone</div><div class="c-val">(810) 937-9864</div></div></div>
-      <div class="c-detail"><div class="c-ico">✉️</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')" style="color:rgba(255,255,255,.78);">info@planiq.com</a></div></div></div>
-      <a href="javascript:void(0)" onclick="openMail('Free Consultation Request','')" class="btn btn-white">Schedule a Free Call</a>
-    </div>
-  </div>
-  <div class="contact-form-panel">
-    <h3>Send a Message</h3>
-    <p class="contact-form-tagline">Tell us about your operation — we respond within 12 hours.</p>
-    <div class="form">
-      <div class="form-row"><input class="fi" type="text" placeholder="Your Name"/><input class="fi" type="text" placeholder="Company Name"/></div>
-      <div class="form-row"><input class="fi" type="email" placeholder="Email Address"/><input class="fi" type="tel" placeholder="Phone Number"/></div>
-      <select class="fi">
-        <option value="" disabled selected>Industry / Type of Business</option>
-        <option>Manufacturing</option><option>Retail &amp; E-Commerce</option>
-        <option>Logistics &amp; Supply Chain</option><option>Technology</option>
-        <option>Construction &amp; Real Estate</option><option>Energy &amp; Utilities</option><option>Other</option>
-      </select>
-      <textarea class="fi" placeholder="Describe your biggest data or operational challenge…"></textarea>
-      <button class="form-submit" onclick="submitContactForm()">
-        Submit Message <svg viewBox="0 0 14 14" fill="none" style="width:13px;height:13px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
+<!-- Footer for services page -->
 <footer>
   <div class="footer-top">
     <div>
       <div class="footer-brand-row">
-        <div class="footer-mark"><svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#60a5fa" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#60a5fa" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg></div>
+        <div class="footer-mark"><svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#fca5a5" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#fca5a5" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#fca5a5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg></div>
         <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
       </div>
       <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
       <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
     </div>
     <div>
-      <div class="footer-col-title">Services</div>
+      <div class="footer-col-title">Quick Links</div>
       <ul class="footer-links">
-        <li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Data Audit &amp; Assessment</a></li><li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">KPI Dashboards</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Cost &amp; Waste Analysis</a></li><li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Revenue Analytics</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Data Migration</a></li><li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Staff Training</a></li>
-        <li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Reporting Automation</a></li><li><a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('services-anchor').scrollIntoView({behavior:'smooth'}),100)">Strategy Consulting</a></li>
+        <li><button onclick="showPage('home')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">Home</button></li>
+        <li><button onclick="showPage('services')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">Services</button></li>
+        <li><button onclick="showPage('social-proof')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">Success Stories</button></li>
+        <li><button onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">Contact</button></li>
       </ul>
     </div>
     <div>
@@ -599,7 +569,6 @@
         <li><a href="tel:8109379864">(810) 937-9864</a></li>
         <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')">info@planiq.com</a></li>
         <li><a href="javascript:void(0)">Port Huron, MI</a></li>
-        <li><a href="javascript:void(0)" onclick="openMail('Free Consultation Request','')">Book Free Consultation</a></li>
       </ul>
     </div>
   </div>
@@ -608,13 +577,8 @@
     <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
   </div>
 </footer>
+</div><!-- end page-services -->
 
-</div><!-- end page-home -->
-
-
-<!-- ══════════════════════════════════════════════════
-     INDUSTRY PAGE TEMPLATE FUNCTION — rendered by JS
-══════════════════════════════════════════════════ -->
 <div id="page-manufacturing" class="page"></div>
 <div id="page-retail" class="page"></div>
 <div id="page-logistics" class="page"></div>
@@ -622,191 +586,295 @@
 <div id="page-construction" class="page"></div>
 <div id="page-energy" class="page"></div>
 
+<!-- ══════════════════════════════════════════════════
+     SOCIAL PROOF PAGE — Success Stories
+══════════════════════════════════════════════════ -->
+<div id="page-social-proof" class="page">
+<nav id="nav-sp" style="display:none;"></nav>
+
+<!-- Page Hero -->
+<section style="background:var(--slate);padding:130px 5% 80px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;"></div>
+  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(192,21,42,.2) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:relative;z-index:2;max-width:760px;">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(192,21,42,.18);border:1px solid rgba(192,21,42,.35);color:#fca5a5;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">Success Stories</div>
+    <h1 style="font-family:var(--font-serif);font-size:clamp(2.6rem,4.5vw,4rem);font-weight:400;line-height:1.06;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem;">Proof Before You<br><span style="color:var(--amber);font-style:italic;">Commit to a Single Dollar.</span></h1>
+    <p style="font-size:1.05rem;color:rgba(255,255,255,.78);line-height:1.78;max-width:600px;margin-bottom:2rem;">Real results, real client voices, and straight answers to every question we get asked — so you can make a confident, informed decision before we even meet.</p>
+    <button onclick="showPage('home')" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:10px 22px;font-family:var(--font-sans);font-size:.8rem;font-weight:600;cursor:pointer;border-radius:3px;letter-spacing:.04em;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.6)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='rgba(255,255,255,.75)'">← Back to Home</button>
+  </div>
+</section>
+
+<!-- CLIENT RESULTS CHART — moved from home page -->
+<section style="background:var(--slate);padding:80px 5%;border-top:1px solid rgba(255,255,255,.06);">
+  <div class="overline on-dark reveal" style="margin-bottom:1.4rem;">12-Month Trajectory</div>
+  <h2 class="headline on-dark reveal" style="margin-bottom:1rem;">Client Results — Operational Performance Before &amp; After PlanIQ</h2>
+  <p class="prose on-dark reveal" style="max-width:600px;margin-bottom:3rem;">Average composite score across cost efficiency, reporting speed &amp; decision accuracy. Clients who act within 30 days see a <strong style="color:#fff;">34% average improvement</strong> within the first quarter.</p>
+  <div style="max-width:860px;">
+    <div class="problem-chart-card reveal">
+      <div class="chart-eyebrow">Live Client Data</div>
+      <div class="chart-title">Operational Performance Index — Before &amp; After PlanIQ</div>
+      <div class="chart-sub">Average composite score across 6 key performance dimensions</div>
+      <div class="chart-canvas-wrap"><canvas id="homeChart1"></canvas></div>
+      <div class="chart-legend">
+        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#6b7280"></div>Without analytics</div>
+        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#c0152a"></div>With PlanIQ</div>
+      </div>
+      <div class="chart-insight">
+        Clients who act on PlanIQ audit recommendations within 30 days see a
+        <strong>34% average improvement in operational performance</strong> within the first quarter.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVEN IMPACT NUMBERS -->
+<section class="impact" style="background:var(--fog);">
+  <div class="overline reveal">Proven Impact</div>
+  <h2 class="headline reveal" style="margin-top:1.2rem;">Numbers That Speak for Themselves</h2>
+  <p class="prose reveal" style="max-width:580px;margin-top:1rem;color:#1a3530;">These aren't projections. They are real averages drawn from client engagements across every industry we serve.</p>
+  <div class="impact-grid" style="margin-top:3rem;">
+    <div class="impact-card reveal"><span class="impact-num">$150K+</span><div class="impact-label">Losses uncovered per first audit</div><div class="impact-desc">Average hidden inefficiency value identified across all client first-engagement audits in Year 1</div></div>
+    <div class="impact-card reveal"><span class="impact-num">34%</span><div class="impact-label">Mean reduction in operating costs</div><div class="impact-desc">Clients who implement PlanIQ recommendations within the first quarter achieve this on average</div></div>
+    <div class="impact-card reveal"><span class="impact-num">14</span><div class="impact-label">Days to your first working dashboard</div><div class="impact-desc">From signed agreement to live, real-time reporting — a fraction of the typical enterprise timeline</div></div>
+    <div class="impact-card reveal"><span class="impact-num">97%</span><div class="impact-label">Clients who take action within 30 days</div><div class="impact-desc">Of the written audit report delivery — because the findings are clear, costed, and ready to act on</div></div>
+  </div>
+</section>
+
+<!-- CLIENT VOICES / TESTIMONIALS -->
+<section class="testimonials" style="background:var(--white);">
+  <div class="overline reveal">Client Voices</div>
+  <h2 class="headline reveal" style="margin-top:1.2rem;">What Clients Say After the First 90 Days</h2>
+  <p class="prose reveal" style="max-width:560px;margin-top:1rem;color:#1a3530;">Real words from real clients. Every quote below comes from a business owner or operations leader who started exactly where you are now.</p>
+  <div class="test-grid" style="margin-top:3rem;">
+    <div class="test-card reveal"><p class="test-quote">"PlanIQ found $80,000 in annual waste in our first audit that we didn't even know existed. That paid for three years of their services in one report."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">RK</div><div><div class="test-name">Randy Kowalski</div><div class="test-role">Plant Manager, Blue Water Stamping</div></div></div></div>
+    <div class="test-card reveal"><p class="test-quote">"Our inventory used to be a guessing game. Now we have live visibility across all three warehouses and reorder happens automatically. Stockouts are gone."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">DT</div><div><div class="test-name">Diane Tompkins</div><div class="test-role">VP Operations, Marysville Fabricators</div></div></div></div>
+    <div class="test-card reveal"><p class="test-quote">"The dashboard PlanIQ built for our sales team increased rep performance by 22% in 60 days. Everyone could finally see the same numbers in real time."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">JM</div><div><div class="test-name">Jim Mulvaney</div><div class="test-role">CEO, Great Lakes Distribution</div></div></div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" style="background:var(--fog);">
+  <div class="faq-left reveal">
+    <div class="overline" style="margin-bottom:1.2rem;">FAQ</div>
+    <h2 class="headline">Questions We Get Asked Every Week</h2>
+    <p style="font-size:.9rem;color:#1a3530;line-height:1.78;margin-top:1.2rem;margin-bottom:2rem;">Straight answers about what we do, how it works, and what you can expect — no fluff.</p>
+    <a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" class="btn btn-primary" style="margin-top:1.4rem;">Ask Us Directly <svg viewBox="0 0 14 14" fill="none" style="width:13px;height:13px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does the free audit actually include? <span class="faq-plus">+</span></button><div class="faq-a">We visit your operation, walk the floor, interview key staff, and map how data flows through your business. We then deliver a written report identifying your top 3–5 data challenges, their estimated cost impact, and a clear recommended action plan. No sales pitch. No obligation.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly will we see results? <span class="faq-plus">+</span></button><div class="faq-a">First working dashboards typically go live within 2–4 weeks. Measurable operational improvements — cost reduction, efficiency gains, revenue visibility — emerge within 60–90 days of a full implementation.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you work with our existing systems? <span class="faq-plus">+</span></button><div class="faq-a">Yes. We specialize in connecting legacy systems, ERP platforms, spreadsheets, CRM tools, and paper-based processes into a unified data layer. We work with what you have — you don't need to replace anything to work with us.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does it cost beyond the free audit? <span class="faq-plus">+</span></button><div class="faq-a">Every engagement is scoped and priced transparently before any work begins. We offer project-based pricing for one-off deliverables and monthly retainer plans for ongoing partnership. There are no hidden fees, no scope creep charges, and no surprises.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you work with companies outside Michigan? <span class="faq-plus">+</span></button><div class="faq-a">Absolutely. While our roots are in Port Huron and the Blue Water area, we serve clients nationwide. Many engagements are fully remote — particularly for technology, retail, and logistics clients. For manufacturing and construction, we do prefer an in-person visit for the initial audit.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens after the project is delivered? <span class="faq-plus">+</span></button><div class="faq-a">We offer monthly partner plans that include system check-ins, data quality maintenance, reporting updates, priority support, and quarterly strategy reviews. We also provide full documentation and training so your team is self-sufficient — we're a long-term partner, not a dependency.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA at bottom of social proof page -->
+<div class="cta-banner">
+  <div class="cta-banner-bg"></div>
+  <div>
+    <div class="overline amber">Ready to start?</div>
+    <h2 style="margin-top:1rem;">The Gap Between What You Know and What's Actually Happening Is Costing You More Than You Think.</h2>
+    <p class="cta-sub">A free PlanIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
+      <span class="btn-tile-label">Start With a Free Audit</span>
+      <div class="btn-tile-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+    </a>
+    <button class="btn btn-outline-white" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)">Send Us a Message</button>
+  </div>
+</div>
+
+<!-- Footer duplicate for social proof page -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-row">
+        <div class="footer-mark"><svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect x="1.5" y="1.5" width="37" height="37" rx="7" stroke="#fca5a5" stroke-width="2.5" fill="none"/><line x1="10" y1="9" x2="10" y2="31" stroke="#fca5a5" stroke-width="3" stroke-linecap="round"/><path d="M10 9 Q20 9 20 16 Q20 23 10 23" stroke="#fca5a5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="27" y1="14" x2="27" y2="31" stroke="#f97316" stroke-width="3" stroke-linecap="round"/><line x1="23" y1="14" x2="31" y2="14" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><line x1="23" y1="31" x2="31" y2="31" stroke="#f97316" stroke-width="2.2" stroke-linecap="round"/><circle cx="27" cy="9" r="2.8" fill="#f97316"/></svg></div>
+        <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
+      </div>
+      <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
+      <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><button onclick="showPage('home')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;transition:color .2s;padding:0;" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">Home</button></li>
+        <li><button onclick="showPage('services')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;">Services</button></li>
+        <li><button onclick="showPage('social-proof')" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;">Success Stories</button></li>
+        <li><button onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" style="background:none;border:none;cursor:pointer;font-family:var(--font-sans);font-size:.8rem;color:rgba(255,255,255,.36);font-weight:400;padding:0;">Contact</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Industries</div>
+      <ul class="footer-links">
+        <li><button onclick="showPage('manufacturing')">Manufacturing</button></li>
+        <li><button onclick="showPage('retail')">Retail &amp; E-Commerce</button></li>
+        <li><button onclick="showPage('logistics')">Logistics &amp; Supply Chain</button></li>
+        <li><button onclick="showPage('technology')">Technology</button></li>
+        <li><button onclick="showPage('construction')">Construction &amp; Real Estate</button></li>
+        <li><button onclick="showPage('energy')">Energy &amp; Utilities</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:8109379864">(810) 937-9864</a></li>
+        <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')"><span class="__cf_email__" data-cfemail="6e070008012e1e020f00071f400d0103">[email&#160;protected]</span></a></li>
+        <li><a href="javascript:void(0)">Port Huron, MI</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 PlanIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
+    <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
+  </div>
+</footer>
+</div><!-- end page-social-proof -->
+
 
 <script>
+/* ─── Industry data ─── */
 /* ─── Industry data ─── */
 const INDUSTRIES = {
   manufacturing: {
     title: "Manufacturing & Industrial",
-    tagline: "Stop losing money to invisible inefficiencies on the shop floor.",
+    tagline: "What's happening on your shop floor right now? Most plant managers can't answer that in real time.",
     desc: "We transform disconnected production data into real-time intelligence — giving plant managers, operations directors, and executives a single source of truth for every metric that matters.",
     img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1400&q=85&fit=crop",
-    color: "rgba(30,58,138,.6)",
-    stats: [
-      {val:"34%", label:"Average reduction in operational costs"},
-      {val:"$80K+", label:"Waste identified per first audit"},
-      {val:"2wk", label:"To first live production dashboard"},
-      {val:"99%", label:"System uptime with real-time alerting"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"34%",label:"Avg reduction in operational costs"},{val:"$80K+",label:"Waste identified per first audit"},{val:"2wk",label:"To first live production dashboard"},{val:"99%",label:"System uptime with real-time alerting"}],
     services: [
-      {icon:'<path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/>',title:"OEE & Downtime Dashboards",desc:"Track Overall Equipment Effectiveness in real time. Identify which machines, shifts, and processes are costing you the most production time.",benefit:"Typically adds 15–25% capacity without capex"},
+      {icon:'<path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/>',title:"OEE & Downtime Dashboards",desc:"Track Overall Equipment Effectiveness in real time. Identify which machines, shifts, and processes are costing the most production time.",benefit:"Typically adds 15–25% capacity without capex"},
       {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Predictive Maintenance Analytics",desc:"Sensor data and run-time patterns analysed to predict failures before they happen — reducing emergency maintenance by up to 40%.",benefit:"Eliminate most unplanned downtime"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Supply Chain & Inventory Tracking",desc:"Live stock visibility across all locations, supplier performance scoring, and automated reorder triggers — eliminating stockouts and overstock simultaneously.",benefit:"Reduce inventory holding costs by 20–30%"},
-      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Production Planning & Scheduling",desc:"Demand-driven scheduling dashboards that match production capacity to actual orders — reducing overtime, rush jobs, and missed deadlines.",benefit:"Improve on-time delivery to 95%+"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Scrap & Waste Cost Analysis",desc:"Line-by-line cost attribution for scrap, rework, and overprocessing. We identify exactly which products, operators, and machines generate the most waste.",benefit:"Average $30K–$150K recovered in Year 1"},
-      {icon:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',title:"Quality & Compliance Reporting",desc:"Automated quality logs, NCR tracking, and audit-ready compliance reports — replacing manual spreadsheets with verified, timestamped records.",benefit:"Reduce audit preparation time by 70%"}
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Supply Chain & Inventory Tracking",desc:"Live stock visibility across all locations, supplier performance scoring, and automated reorder triggers.",benefit:"Reduce inventory holding costs by 20–30%"},
+      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Production Planning & Scheduling",desc:"Demand-driven scheduling dashboards that match production capacity to actual orders.",benefit:"Improve on-time delivery to 95%+"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Scrap & Waste Cost Analysis",desc:"Line-by-line cost attribution for scrap, rework, and overprocessing.",benefit:"Average $30K–$150K recovered in Year 1"},
+      {icon:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',title:"Quality & Compliance Reporting",desc:"Automated quality logs, NCR tracking, and audit-ready compliance reports.",benefit:"Reduce audit preparation time by 70%"}
     ],
-    charts: [
-      {title:"Before vs After: OEE Improvement", sub:"Typical client trajectory over 6 months", type:"line"},
-      {title:"Cost Savings Breakdown", sub:"Where PlanIQ clients find the most value", type:"doughnut"}
+    challenges: [
+      {cost:"$260K/hr",label:"Cost of unplanned downtime",source:"Aberdeen Group",desc:"Every hour your line is unexpectedly stopped, you lose an average of $260K. Most plants have no early warning system in place."},
+      {cost:"18%",label:"Of manager time on manual reports",source:"McKinsey",desc:"Your highest-paid people copy data between spreadsheets instead of making decisions. Analytics automates this entirely."},
+      {cost:"35%",label:"Of shop floor capacity lost to poor scheduling",source:"Deloitte",desc:"Without demand-driven scheduling, most manufacturers run at 65% of their actual production capacity."}
     ],
-    outcomes: [
-      {num:"34%", title:"Operational cost reduction", desc:"Average across clients who implement full recommendations in 90 days"},
-      {num:"$120K+", title:"Average waste value uncovered", desc:"Specific to manufacturing: the average recoverable loss identified in PlanIQ's first on-site audit engagement"},
-      {num:"40%", title:"Reduction in unplanned downtime", desc:"For clients who implement our predictive maintenance analytics layer"}
-    ]
+    roiInputs: {revenueLabel:"Annual production revenue ($)",wasteLabel:"Estimated waste & scrap as % of revenue",adminLabel:"Hours/week on manual reporting",defaultRevenue:5000000,defaultWaste:8,defaultAdmin:15,recoveryRate:0.30,adminRate:0.40}
   },
   retail: {
     title: "Retail & E-Commerce",
-    tagline: "Turn every transaction into intelligence that drives your next sale.",
+    tagline: "Your customers are telling you exactly what they want. Are you listening to the data?",
     desc: "We give retail and e-commerce businesses a complete view of sales performance, customer behaviour, and inventory health — so you can stock smarter, sell more, and retain longer.",
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=85&fit=crop",
-    color: "rgba(249,115,22,.45)",
-    stats: [
-      {val:"28%", label:"Average revenue uplift in Year 1"},
-      {val:"3×", label:"ROI on analytics investment"},
-      {val:"22%", label:"Reduction in overstock costs"},
-      {val:"40%", label:"Improvement in repeat purchase rate"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"28%",label:"Average revenue uplift in Year 1"},{val:"3×",label:"ROI on analytics investment"},{val:"22%",label:"Reduction in overstock costs"},{val:"40%",label:"Improvement in repeat purchase rate"}],
     services: [
-      {icon:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',title:"Sales Performance Analytics",desc:"SKU-level revenue tracking, category performance, channel attribution, and margin analysis — all in one dashboard updated daily.",benefit:"Identify your 20% of products driving 80% of profit"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Inventory Optimisation",desc:"Demand forecasting, reorder point automation, and dead-stock identification — ensuring you never miss a sale due to stockout or tie up cash in overstock.",benefit:"Reduce stockouts by up to 60%"},
-      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Customer Insights & Segmentation",desc:"RFM analysis, purchase frequency trends, basket size, and lifetime value — so you know exactly who your best customers are and how to get more like them.",benefit:"Increase average order value by 15–25%"},
-      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Churn & Retention Analytics",desc:"Identify customers showing early churn signals before they leave — and trigger automated outreach to win them back at the right moment.",benefit:"Reduce churn rate by 25–35%"},
-      {icon:'<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>',title:"Marketing Attribution & ROI",desc:"Connect marketing spend to actual revenue across all channels — Google, Meta, email, and organic — so you know exactly what's working and what's wasted.",benefit:"Reallocate budget to highest-ROI channels"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Pricing & Margin Analytics",desc:"Dynamic pricing insights, margin-by-SKU analysis, and competitor price monitoring — giving you confidence to price for profit, not just volume.",benefit:"Improve gross margin by 8–15%"}
+      {icon:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>',title:"Sales Performance Analytics",desc:"SKU-level revenue tracking, category performance, channel attribution, and margin analysis — updated daily.",benefit:"Identify your 20% of products driving 80% of profit"},
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Inventory Optimisation",desc:"Demand forecasting, reorder point automation, and dead-stock identification.",benefit:"Reduce stockouts by up to 60%"},
+      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Customer Insights & Segmentation",desc:"RFM analysis, purchase frequency, basket size, and lifetime value modelling.",benefit:"Increase average order value by 15–25%"},
+      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Churn & Retention Analytics",desc:"Identify customers showing early churn signals and trigger automated outreach at the right moment.",benefit:"Reduce churn rate by 25–35%"},
+      {icon:'<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>',title:"Marketing Attribution & ROI",desc:"Connect marketing spend to actual revenue across all channels — so you know exactly what's working.",benefit:"Reallocate budget to highest-ROI channels"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Pricing & Margin Analytics",desc:"Dynamic pricing insights, margin-by-SKU analysis, and competitor price monitoring.",benefit:"Improve gross margin by 8–15%"}
     ],
-    charts: [
-      {title:"Revenue Growth: Before vs After Analytics", sub:"12-month client comparison", type:"line"},
-      {title:"Customer Segment Revenue Share", sub:"Post-segmentation analysis", type:"doughnut"}
+    challenges: [
+      {cost:"3.2%",label:"Of annual revenue lost to overstock",source:"NRF",desc:"The average retailer ties up 3.2% of revenue in excess inventory. That's dead cash that grows every month you can't see it."},
+      {cost:"25–40%",label:"Of customers lost to preventable churn",source:"Bain & Co",desc:"Most retailers have no early-warning system for at-risk customers. By the time they leave, the window to re-engage has closed."},
+      {cost:"62%",label:"Of marketing spend with unclear ROI",source:"Forrester",desc:"Without attribution analytics, most retailers can't identify which channels drove a purchase — so budgets get misallocated."}
     ],
-    outcomes: [
-      {num:"28%", title:"Average revenue growth in Year 1", desc:"Across retail and e-commerce clients who act on PlanIQ recommendations within 60 days"},
-      {num:"60%", title:"Reduction in stockout incidents", desc:"For clients who implement our inventory forecasting and reorder automation"},
-      {num:"35%", title:"Reduction in customer churn", desc:"Average improvement for clients implementing our retention analytics and early-warning system"}
-    ]
+    roiInputs: {revenueLabel:"Annual retail revenue ($)",wasteLabel:"Estimated inventory waste & overstock as % of revenue",adminLabel:"Hours/week on manual sales & inventory reporting",defaultRevenue:3000000,defaultWaste:6,defaultAdmin:10,recoveryRate:0.28,adminRate:0.40}
   },
   logistics: {
     title: "Logistics & Supply Chain",
-    tagline: "Know exactly where everything is, what it costs, and how to move it faster.",
+    tagline: "You're moving thousands of shipments. But do you know which ones are quietly bleeding margin?",
     desc: "We build the real-time visibility layer that logistics and supply chain businesses need to cut costs, optimise routes, and deliver on time — every time.",
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&q=85&fit=crop",
-    color: "rgba(10,15,30,.65)",
-    stats: [
-      {val:"18%", label:"Average reduction in fuel & route costs"},
-      {val:"95%+", label:"On-time delivery achieved post-analytics"},
-      {val:"30%", label:"Faster incident response with live tracking"},
-      {val:"$200K+", label:"Average annual savings identified"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"18%",label:"Average reduction in fuel & route costs"},{val:"95%+",label:"On-time delivery achieved post-analytics"},{val:"30%",label:"Faster incident response with live tracking"},{val:"$200K+",label:"Average annual savings identified"}],
     services: [
-      {icon:'<path d="M1 3h15v13H1z"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>',title:"Fleet Performance Analytics",desc:"Real-time vehicle tracking, driver performance scoring, fuel consumption analysis, and maintenance scheduling — all in a single fleet intelligence dashboard.",benefit:"Reduce fleet operating costs by 15–20%"},
-      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Route Optimisation Dashboards",desc:"Historical route performance analysis, traffic pattern data, and delivery density mapping — identifying your most efficient routes and exposing costly inefficiencies.",benefit:"Cut average route cost by 12–18%"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Inventory & Warehouse Analytics",desc:"Stock location accuracy, pick efficiency, dock utilisation, and cross-dock performance — eliminating the bottlenecks that delay shipments.",benefit:"Reduce warehouse labour costs by 20–25%"},
-      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Carrier & Supplier KPI Dashboards",desc:"Scorecards for every carrier, 3PL, and supplier — tracking on-time performance, damage rates, and cost per shipment to drive better negotiations.",benefit:"Improve carrier accountability immediately"},
-      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Demand Forecasting & Planning",desc:"Predictive demand models that align inventory positioning to upcoming orders — reducing emergency shipments and last-mile premium freight costs.",benefit:"Eliminate most emergency freight charges"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Cost Per Delivery Analytics",desc:"Full landed-cost attribution per delivery, lane, and customer — revealing which routes, customers, and contracts are profitable and which are margin destroyers.",benefit:"Renegotiate unprofitable contracts with data"}
+      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Fleet & Route Analytics",desc:"Real-time GPS tracking, route efficiency scoring, fuel consumption analysis, and idle-time reporting.",benefit:"Cut fuel costs by 12–18%"},
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Warehouse Performance Dashboards",desc:"Pick rates, dock utilisation, labour productivity, and inventory accuracy tracked by shift and location.",benefit:"Improve warehouse throughput by 20–30%"},
+      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Carrier & Supplier Scorecards",desc:"On-time performance, damage rates, and cost-per-shipment tracked by carrier.",benefit:"Reduce carrier penalties by up to 40%"},
+      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Demand Forecasting & Stock Positioning",desc:"Predictive demand models that position stock at the right node before it's needed.",benefit:"Cut emergency transfer costs by 35%"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Cost-Per-Shipment Analytics",desc:"Full landed cost visibility by lane, mode, customer, and carrier — identifying where you're losing margin.",benefit:"Identify margin leaks in 30 days"},
+      {icon:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',title:"Customer SLA & Service Reporting",desc:"Automated SLA scorecards, exception alerts, and on-time delivery dashboards.",benefit:"Reduce SLA breach penalties by 60%"}
     ],
-    charts: [
-      {title:"On-Time Delivery Rate Improvement", sub:"6-month client progression", type:"line"},
-      {title:"Cost Reduction by Category", sub:"Where logistics clients save most", type:"doughnut"}
+    challenges: [
+      {cost:"30–35%",label:"Of operating costs consumed by fuel & routes",source:"CSCMP",desc:"Fuel and routing are your biggest controllable cost — yet most logistics firms manage it reactively, without data-driven optimisation."},
+      {cost:"2×",label:"The shipment value in late delivery penalties",source:"Gartner",desc:"A missed SLA doesn't just cost the penalty — it costs the relationship. Live tracking prevents the miss before it happens."},
+      {cost:"18%",label:"Of revenue from underpriced lanes",source:"Deloitte",desc:"Without cost-per-lane analytics, most logistics firms unknowingly quote below margin on their highest-volume routes."}
     ],
-    outcomes: [
-      {num:"18%", title:"Average reduction in fuel & route costs", desc:"For fleet operators who implement route optimisation analytics within 60 days"},
-      {num:"95%+", title:"On-time delivery rate", desc:"Achieved by clients who implement our real-time carrier and route performance monitoring"},
-      {num:"$200K+", title:"Annual savings identified", desc:"Average across logistics and supply chain clients in the first engagement year"}
-    ]
+    roiInputs: {revenueLabel:"Annual logistics revenue ($)",wasteLabel:"Estimated routing inefficiency as % of fuel costs",adminLabel:"Hours/week on manual tracking & reporting",defaultRevenue:4000000,defaultWaste:12,defaultAdmin:12,recoveryRate:0.22,adminRate:0.40}
   },
   technology: {
-    title: "Technology",
-    tagline: "Turn product signals and revenue data into the growth engine your team has been missing.",
-    desc: "From subscription analytics to product usage intelligence, we help technology businesses translate behavioural data into smarter product decisions, lower churn, and faster, more confident growth.",
+    title: "Technology & Digital",
+    tagline: "You're building with data every day. But are you using it to keep the customers you already have?",
+    desc: "We help technology companies turn product usage data, customer behaviour, and growth metrics into the intelligence that reduces churn, drives expansion, and accelerates product decisions.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=85&fit=crop",
-    color: "rgba(14,30,90,.65)",
-    stats: [
-      {val:"32%", label:"Average churn reduction in 6 months"},
-      {val:"25%", label:"Increase in expansion MRR"},
-      {val:"3×", label:"Faster product decisions with live data"},
-      {val:"40%", label:"Reduction in CAC through attribution clarity"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"32%",label:"Average churn reduction"},{val:"25%",label:"Increase in expansion MRR"},{val:"40%",label:"Reduction in CAC"},{val:"2wk",label:"To first live product dashboard"}],
     services: [
-      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Customer Churn Analytics",desc:"Early-warning churn models, usage decline detection, and at-risk account scoring — so your CS team engages customers before they cancel, not after.",benefit:"Reduce monthly churn by 25–40%"},
-      {icon:'<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>',title:"Revenue & Subscription Dashboards",desc:"MRR, ARR, NRR, expansion, contraction, and churn revenue — all tracked in real time with cohort comparisons and forecasting to your next milestone.",benefit:"Complete subscription revenue visibility"},
-      {icon:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>',title:"Product & Feature Analytics",desc:"Feature adoption rates, user journey mapping, and activation funnel analysis — revealing exactly which features drive retention and which create friction.",benefit:"Prioritise product roadmap with data"},
-      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Cohort & Retention Analysis",desc:"Cohort retention curves by acquisition source, plan type, industry, and signup date — understanding precisely what makes your best customers stay.",benefit:"Double down on highest-LTV acquisition channels"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Growth & KPI Tracking",desc:"North star metric tracking, OKR dashboards, and growth experiment analysis — giving leadership and product teams a single source of truth for every growth initiative.",benefit:"Align entire team around measurable growth"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Customer Health Scoring",desc:"Automated health scores for every account based on usage, engagement, support tickets, and expansion signals — enabling proactive success at scale.",benefit:"Scale CS team impact without headcount"}
+      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Churn Prediction & Early Warning",desc:"Usage-pattern models that flag at-risk accounts 30–60 days before they churn.",benefit:"Reduce churn by 25–40%"},
+      {icon:'<path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/>',title:"Product Usage Analytics",desc:"Feature adoption rates, user journey mapping, and activation funnel analysis.",benefit:"Prioritise roadmap with data"},
+      {icon:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>',title:"Revenue & MRR Dashboards",desc:"ARR, MRR, expansion, contraction, and churn tracked in real time with cohort breakdowns.",benefit:"Full revenue visibility in one view"},
+      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Cohort & Retention Analysis",desc:"Retention curves by acquisition source, plan type, and signup date.",benefit:"Double down on highest-LTV channels"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Growth & OKR Tracking",desc:"North star metric tracking, OKR dashboards, and growth experiment analysis.",benefit:"Align entire team around measurable growth"},
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Customer Health Scoring",desc:"Automated health scores for every account based on usage, engagement, and support signals.",benefit:"Scale CS impact without headcount"}
     ],
-    charts: [
-      {title:"MRR Growth After Analytics Implementation", sub:"Average client trajectory", type:"line"},
-      {title:"Churn Reduction by Segment", sub:"6-month post-implementation results", type:"doughnut"}
+    challenges: [
+      {cost:"5–7×",label:"CAC vs cost of retaining a customer",source:"Bain & Co",desc:"Acquiring a new customer costs 5–7× more than keeping one. Yet most SaaS companies invest more in acquisition than retention analytics."},
+      {cost:"$1.6M",label:"Lost per 1% churn on $4M ARR",source:"ChurnZero",desc:"Churn compounds silently. A 1% monthly churn rate means losing 11.4% of ARR per year — most teams don't see it until it's too late."},
+      {cost:"40%",label:"Of product decisions made without usage data",source:"Pendo",desc:"Without feature adoption analytics, product teams build on instinct — expensive roadmap bets that miss what users actually need."}
     ],
-    outcomes: [
-      {num:"32%", title:"Average churn reduction", desc:"For technology clients who implement our early-warning churn analytics and CS workflow within 90 days"},
-      {num:"25%", title:"Increase in expansion MRR", desc:"Through better upsell targeting, health scoring, and account intelligence"},
-      {num:"40%", title:"Reduction in CAC", desc:"By identifying highest-converting acquisition channels and reallocating budget accordingly"}
-    ]
+    roiInputs: {revenueLabel:"Annual recurring revenue — ARR ($)",wasteLabel:"Estimated monthly churn rate (%)",adminLabel:"Hours/week on manual reporting & data pulls",defaultRevenue:2000000,defaultWaste:5,defaultAdmin:8,recoveryRate:0.25,adminRate:0.40}
   },
   construction: {
     title: "Construction & Real Estate",
-    tagline: "Every project tracked. Every cost visible. Every decision backed by data.",
+    tagline: "Every project that runs over budget had the warning signs in the data. You just couldn't see them in time.",
     desc: "We give construction and real estate firms real-time project intelligence — from budget tracking and labour productivity to portfolio performance and pipeline forecasting.",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&fit=crop",
-    color: "rgba(234,88,12,.45)",
-    stats: [
-      {val:"22%", label:"Average reduction in project cost overruns"},
-      {val:"30%", label:"Improvement in resource utilisation"},
-      {val:"3×", label:"Faster project status reporting"},
-      {val:"$100K+", label:"Typical first-year savings per project"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"22%",label:"Average reduction in project cost overruns"},{val:"30%",label:"Improvement in resource utilisation"},{val:"3×",label:"Faster project status reporting"},{val:"$100K+",label:"Typical first-year savings per project"}],
     services: [
-      {icon:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',title:"Project Tracking Dashboards",desc:"Real-time status across every active project — budget vs actual, schedule variance, milestone completion, and risk flags all visible in one place.",benefit:"Eliminate end-of-month reporting surprises"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Cost Control & Variance Analytics",desc:"Line-by-line cost tracking against estimates, subcontractor spend analysis, and change order impact modelling — catching overruns before they compound.",benefit:"Reduce cost overruns by 20–30%"},
-      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Labour & Subcontractor Performance",desc:"Productivity tracking by crew, trade, and subcontractor — with daily output vs plan comparison and utilisation reporting across all active sites.",benefit:"Improve site productivity by 15–25%"},
-      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Portfolio & Pipeline Analytics",desc:"Across-portfolio revenue forecasting, project margin analysis, and bid win-rate tracking — giving leadership visibility from bid to final account.",benefit:"Make data-driven bid-go decisions"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Procurement & Materials Analytics",desc:"Supplier spend analysis, material price variance tracking, and procurement cycle time reporting — reducing material waste and procurement overhead.",benefit:"Reduce procurement costs by 10–20%"},
-      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Real Estate Portfolio Reporting",desc:"Property performance dashboards, occupancy tracking, cap rate analysis, and NOI reporting — for investors, developers, and portfolio managers who need clarity at scale.",benefit:"Full portfolio visibility in one view"}
+      {icon:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',title:"Project Tracking Dashboards",desc:"Real-time status across every active project — budget vs actual, schedule variance, milestone completion, and risk flags.",benefit:"Eliminate end-of-month reporting surprises"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Cost Control & Variance Analytics",desc:"Line-by-line cost tracking against estimates, subcontractor spend analysis, and change order impact modelling.",benefit:"Reduce cost overruns by 20–30%"},
+      {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>',title:"Labour & Subcontractor Performance",desc:"Productivity tracking by crew, trade, and subcontractor with daily output vs plan comparison.",benefit:"Improve site productivity by 15–25%"},
+      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Portfolio & Pipeline Analytics",desc:"Revenue forecasting, project margin analysis, and bid win-rate tracking from bid to final account.",benefit:"Make data-driven bid-go decisions"},
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Procurement & Materials Analytics",desc:"Supplier spend analysis, material price variance tracking, and procurement cycle time reporting.",benefit:"Reduce procurement costs by 10–20%"},
+      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Real Estate Portfolio Reporting",desc:"Property performance dashboards, occupancy tracking, cap rate analysis, and NOI reporting.",benefit:"Full portfolio visibility in one view"}
     ],
-    charts: [
-      {title:"Project Cost Variance Over Time", sub:"Before and after analytics implementation", type:"line"},
-      {title:"Cost Overrun Distribution by Category", sub:"Where construction projects lose money", type:"doughnut"}
+    challenges: [
+      {cost:"80%",label:"Of large projects run over budget or late",source:"McKinsey",desc:"McKinsey found that 98% of megaprojects suffer cost overruns above 30%. The root cause is always the same: no real-time visibility into cost vs plan."},
+      {cost:"35%",label:"Of labour hours wasted to poor scheduling",source:"FMI",desc:"Without resource analytics, crews sit idle, subcontractors stack, and overtime explodes — most project managers discover this at month-end."},
+      {cost:"6–8%",label:"Of project value lost to procurement gaps",source:"Deloitte",desc:"Material price variance, duplicate orders, and off-contract purchasing drain 6–8% of total project value — invisible without analytics."}
     ],
-    outcomes: [
-      {num:"22%", title:"Reduction in project cost overruns", desc:"For construction clients who implement our real-time budget tracking and variance alerting"},
-      {num:"30%", title:"Improvement in resource utilisation", desc:"By identifying idle labour, equipment, and subcontractor scheduling gaps in real time"},
-      {num:"$100K+", title:"Typical first-year project savings", desc:"Across cost control, procurement optimisation, and labour productivity improvements"}
-    ]
+    roiInputs: {revenueLabel:"Annual project revenue ($)",wasteLabel:"Estimated cost overrun as % of project value",adminLabel:"Hours/week on project reporting & status updates",defaultRevenue:8000000,defaultWaste:10,defaultAdmin:20,recoveryRate:0.25,adminRate:0.40}
   },
   energy: {
     title: "Energy & Utilities",
-    tagline: "Maximise asset uptime, minimise waste, and report with confidence.",
+    tagline: "An unmonitored asset doesn't just degrade — it fails at the worst possible moment.",
     desc: "We help energy and utilities organisations build the analytics infrastructure needed to monitor assets in real time, optimise energy consumption, automate compliance reporting, and reduce operational costs.",
     img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1400&q=85&fit=crop",
-    color: "rgba(30,58,138,.55)",
-    stats: [
-      {val:"25%", label:"Average reduction in energy waste"},
-      {val:"40%", label:"Less time on manual compliance reports"},
-      {val:"99.5%", label:"Asset uptime with predictive monitoring"},
-      {val:"$180K+", label:"Average annual efficiency savings"}
-    ],
+    color: "rgba(192,21,42,.6)",
+    stats: [{val:"25%",label:"Avg reduction in energy waste"},{val:"40%",label:"Less time on manual compliance reports"},{val:"99.5%",label:"Asset uptime with predictive monitoring"},{val:"$180K+",label:"Average annual efficiency savings"}],
     services: [
-      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Asset Health Monitoring",desc:"Real-time sensor data aggregation, anomaly detection, and failure prediction for generation assets, transformers, pipelines, and grid infrastructure.",benefit:"Reduce unplanned outages by 35–50%"},
-      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Energy Consumption Analytics",desc:"Interval-level consumption monitoring, load profiling, peak demand analysis, and energy efficiency scoring — identifying every point of unnecessary waste.",benefit:"Reduce energy costs by 15–25%"},
-      {icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',title:"Regulatory & Compliance Reporting",desc:"Automated generation, formatting, and distribution of NERC, EPA, and regional compliance reports — replacing weeks of manual work with a scheduled, auditable process.",benefit:"Cut compliance prep time by 60–80%"},
-      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Grid & Network Performance Dashboards",desc:"Voltage, frequency, load flow, and transmission performance monitoring — giving grid operators a real-time operational picture across the full network.",benefit:"Faster fault detection and response"},
-      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Renewable Integration Analytics",desc:"Solar irradiance, wind speed, generation output, and curtailment tracking — providing the operational visibility needed to maximise renewable asset performance.",benefit:"Increase renewable yield by 10–20%"},
-      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Operational Cost & Maintenance KPIs",desc:"Maintenance cost per asset, crew productivity, parts inventory, and work order cycle time — all tracked in a single operations intelligence dashboard.",benefit:"Reduce O&M costs by 18–25%"}
+      {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Asset Health Monitoring",desc:"Real-time sensor data aggregation, anomaly detection, and failure prediction for generation assets, transformers, and pipelines.",benefit:"Reduce unplanned outages by 35–50%"},
+      {icon:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',title:"Energy Consumption Analytics",desc:"Interval-level consumption monitoring, load profiling, peak demand analysis, and energy efficiency scoring.",benefit:"Reduce energy costs by 15–25%"},
+      {icon:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>',title:"Regulatory & Compliance Reporting",desc:"Automated generation, formatting, and distribution of NERC, EPA, and regional compliance reports.",benefit:"Cut compliance prep time by 60–80%"},
+      {icon:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>',title:"Grid & Network Performance Dashboards",desc:"Voltage, frequency, load flow, and transmission performance monitoring for real-time grid visibility.",benefit:"Faster fault detection and response"},
+      {icon:'<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',title:"Renewable Integration Analytics",desc:"Solar irradiance, wind speed, generation output, and curtailment tracking for maximum renewable performance.",benefit:"Increase renewable yield by 10–20%"},
+      {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Operational Cost & Maintenance KPIs",desc:"Maintenance cost per asset, crew productivity, parts inventory, and work order cycle time in one dashboard.",benefit:"Reduce O&M costs by 18–25%"}
     ],
-    charts: [
-      {title:"Energy Waste Reduction Over 12 Months", sub:"Typical client results post-analytics", type:"line"},
-      {title:"Operational Cost Breakdown", sub:"Where energy clients achieve biggest savings", type:"doughnut"}
+    challenges: [
+      {cost:"$260K/hr",label:"Cost of an unplanned outage",source:"Siemens",desc:"Every unmonitored asset is a potential outage waiting to happen. Predictive analytics identifies failure signals weeks before they become shutdowns."},
+      {cost:"20–30%",label:"Of energy consumed unnecessarily",source:"IEA",desc:"The International Energy Agency estimates 20–30% of energy consumed is wasted due to inefficient assets and poor load management."},
+      {cost:"60+ hrs",label:"Per month on manual compliance prep",source:"NERC",desc:"Compliance reporting is consuming your best engineers. Automated report generation reclaims that time and eliminates filing errors."}
     ],
-    outcomes: [
-      {num:"25%", title:"Average reduction in energy waste", desc:"By identifying consumption anomalies, inefficient assets, and demand patterns that were previously invisible"},
-      {num:"40%", title:"Less time on compliance reporting", desc:"Through automated report generation and scheduled distribution replacing manual processes"},
-      {num:"$180K+", title:"Average annual efficiency savings", desc:"Across asset optimisation, energy reduction, and maintenance cost improvements"}
-    ]
+    roiInputs: {revenueLabel:"Annual operating budget ($)",wasteLabel:"Estimated energy waste as % of consumption costs",adminLabel:"Hours/week on manual compliance & reporting",defaultRevenue:6000000,defaultWaste:15,defaultAdmin:25,recoveryRate:0.22,adminRate:0.40}
   }
 };
+
 
 /* ─── Build industry page HTML ─── */
 function buildIndustryPage(key) {
@@ -816,11 +884,19 @@ function buildIndustryPage(key) {
   if (el._built) return;
   el._built = true;
 
-  const chartId1 = key + 'Chart1', chartId2 = key + 'Chart2';
-
   const svgArr = '<svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
-  const statsHTML = d.stats.map(s => `<div class="ist"><div class="ist-val">${s.val}</div><div class="ist-label">${s.label}</div></div>`).join('');
+  const servicesHeadline = {
+    manufacturing: "From Shop Floor to Boardroom — Every Metric That Drives Your Plant.",
+    retail:        "From First Click to Loyal Customer — Every Insight That Grows Your Revenue.",
+    logistics:     "From Warehouse Dock to Final Mile — Every Data Point That Cuts Your Costs.",
+    technology:    "From Signup to Expansion — Every Signal That Keeps and Grows Your Customers.",
+    construction:  "From First Bid to Final Account — Every Number That Keeps Projects on Budget.",
+    energy:        "From Asset Sensor to Compliance Report — Every Metric That Runs Your Operation."
+  }[key] || "Everything You Need. Nothing You Don't.";
+  const roi = d.roiInputs;
+  const roiId = key + 'Roi';
+
   const servicesHTML = d.services.map(s => `
     <div class="ind-svc-card reveal">
       <div class="ind-svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${s.icon}</svg></div>
@@ -828,11 +904,12 @@ function buildIndustryPage(key) {
       <div class="ind-svc-desc">${s.desc}</div>
       <div class="ind-svc-benefit">${s.benefit}</div>
     </div>`).join('');
-  const outcomesHTML = d.outcomes.map(o => `
-    <div class="outcome-card reveal">
-      <div class="outcome-num">${o.num}</div>
-      <div class="outcome-title">${o.title}</div>
-      <div class="outcome-desc">${o.desc}</div>
+  const challengesHTML = d.challenges.map((c,i) => `
+    <div class="chal-card reveal">
+      <div class="chal-cost">${c.cost}</div>
+      <div class="chal-label">${c.label}</div>
+      <div class="chal-desc">${c.desc}</div>
+      <div class="chal-source">Source: ${c.source}</div>
     </div>`).join('');
 
   el.innerHTML = `
@@ -850,45 +927,186 @@ function buildIndustryPage(key) {
         </div>
       </div>
     </div>
-    <div class="ind-stats-bar">${statsHTML}</div>
     <section class="ind-services-section">
       <div class="overline reveal">Our Services — ${d.title}</div>
-      <h2 class="headline reveal" style="margin-top:1.2rem;">Everything You Need. Nothing You Don't.</h2>
+      <h2 class="headline reveal" style="margin-top:1.2rem;">${servicesHeadline}</h2>
       <div class="ind-svc-grid">${servicesHTML}</div>
     </section>
-    <section class="ind-chart-section">
-      <div class="overline reveal">Results &amp; Benchmarks</div>
-      <h2 class="headline reveal" style="margin-top:1.2rem;">See the Numbers Before You Decide</h2>
-      <div class="ind-chart-grid">
-        <div class="ind-chart-card reveal"><h3>${d.charts[0].title}</h3><p>${d.charts[0].sub}</p><div class="ind-chart-wrap"><canvas id="${chartId1}"></canvas></div></div>
-        <div class="ind-chart-card reveal"><h3>${d.charts[1].title}</h3><p>${d.charts[1].sub}</p><div class="ind-chart-wrap"><canvas id="${chartId2}"></canvas></div></div>
+
+    <!-- COMMON CHALLENGES + COST -->
+    <section class="ind-challenges" style="background:var(--slate);padding:90px 5%;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;"></div>
+      <div style="position:relative;z-index:1;">
+        <div class="overline on-dark reveal" style="margin-bottom:1.4rem;">Common Challenges</div>
+        <h2 class="headline on-dark reveal">What This Industry Is Losing Right Now — Without Analytics</h2>
+        <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">Every figure below is sourced from independent industry research. This is what the data says is happening in your sector — before companies like PlanIQ step in.</p>
+        <div class="chal-grid" style="margin-top:52px;">${challengesHTML}</div>
       </div>
     </section>
-    <section class="ind-outcomes">
-      <div class="overline reveal">Proven Outcomes</div>
-      <h2 class="headline reveal" style="margin-top:1.2rem;">What Clients Achieve</h2>
-      <div class="ind-outcomes-grid">${outcomesHTML}</div>
+
+    <!-- ROI CALCULATOR -->
+    <section class="ind-roi" style="background:var(--fog);padding:90px 5%;">
+      <div class="overline reveal" style="margin-bottom:1.4rem;">ROI Estimator</div>
+      <h2 class="headline reveal">What Could Analytics Be Worth to Your Business?</h2>
+      <p class="prose reveal" style="max-width:560px;margin-top:1rem;">Enter your numbers below. We'll calculate a conservative estimate of the annual value PlanIQ could unlock — based on industry-average recovery rates.</p>
+      <div class="roi-wrap reveal" id="${roiId}" style="margin-top:52px;">
+        <div class="roi-inputs">
+          <div class="roi-field">
+            <label class="roi-label">${roi.revenueLabel}</label>
+            <input class="roi-input" type="number" id="${roiId}_rev" value="${roi.defaultRevenue}" min="100000" step="100000" oninput="calcRoi('${roiId}')"/>
+          </div>
+          <div class="roi-field">
+            <label class="roi-label">${roi.wasteLabel}</label>
+            <div class="roi-slider-row">
+              <input class="roi-slider" type="range" id="${roiId}_waste" min="1" max="30" step="1" value="${roi.defaultWaste}" oninput="calcRoi('${roiId}')"/>
+              <span class="roi-slider-val" id="${roiId}_waste_val">${roi.defaultWaste}%</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label class="roi-label">${roi.adminLabel}</label>
+            <div class="roi-slider-row">
+              <input class="roi-slider" type="range" id="${roiId}_admin" min="1" max="60" step="1" value="${roi.defaultAdmin}" oninput="calcRoi('${roiId}')"/>
+              <span class="roi-slider-val" id="${roiId}_admin_val">${roi.defaultAdmin} hrs</span>
+            </div>
+          </div>
+        </div>
+        <div class="roi-results">
+          <div class="roi-result-card">
+            <div class="roi-result-label">Estimated recoverable value per year</div>
+            <div class="roi-result-val" id="${roiId}_total">—</div>
+            <div class="roi-result-range" id="${roiId}_range"></div>
+          </div>
+          <div class="roi-breakdown" id="${roiId}_breakdown"></div>
+          <p class="roi-disclaimer">Estimates are based on industry-average recovery rates from published research. Actual results depend on your specific operation. A PlanIQ audit will give you a precise, costed figure.</p>
+          <a href="javascript:void(0)" onclick="openMail('ROI Audit Request — ${d.title}','')" class="btn btn-primary" style="margin-top:1.2rem;display:inline-flex;align-items:center;gap:8px;">Verify My Number With a Free Audit ${svgArr}</a>
+        </div>
+      </div>
     </section>
+
+    <!-- REPORTING TIME SAVINGS ESTIMATOR -->
+    <section style="background:var(--white);padding:90px 5%;border-top:1px solid var(--rule);">
+      <div class="overline reveal" style="margin-bottom:1.4rem;">Reporting Time Savings</div>
+      <h2 class="headline reveal">How Many Hours Is Manual Reporting Costing Your Team?</h2>
+      <p class="prose reveal" style="max-width:560px;margin-top:1rem;">Manual report building, data reconciliation, and copy-paste between systems quietly consumes thousands of hours per year. Use this estimator to put a dollar figure on it.</p>
+      <div class="roi-wrap reveal" id="${roiId}_rts" style="margin-top:52px;">
+        <div class="roi-inputs">
+          <div class="roi-field">
+            <label class="roi-label">Number of staff involved in manual reporting</label>
+            <input class="roi-input" type="number" id="${roiId}_rts_staff" value="3" min="1" max="50" step="1" oninput="calcRts('${roiId}')"/>
+          </div>
+          <div class="roi-field">
+            <label class="roi-label">Average hours each spends per week on reporting</label>
+            <div class="roi-slider-row">
+              <input class="roi-slider" type="range" id="${roiId}_rts_hrs" min="1" max="30" step="1" value="${roi.defaultAdmin}" oninput="calcRts('${roiId}')"/>
+              <span class="roi-slider-val" id="${roiId}_rts_hrs_val">${roi.defaultAdmin} hrs</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label class="roi-label">Average fully-loaded hourly cost per person (inc. overhead)</label>
+            <div class="roi-slider-row">
+              <input class="roi-slider" type="range" id="${roiId}_rts_rate" min="20" max="200" step="5" value="65" oninput="calcRts('${roiId}')"/>
+              <span class="roi-slider-val" id="${roiId}_rts_rate_val">$65/hr</span>
+            </div>
+          </div>
+          <div class="roi-field">
+            <label class="roi-label">% of reporting time automatable by analytics</label>
+            <div class="roi-slider-row">
+              <input class="roi-slider" type="range" id="${roiId}_rts_auto" min="10" max="90" step="5" value="70" oninput="calcRts('${roiId}')"/>
+              <span class="roi-slider-val" id="${roiId}_rts_auto_val">70%</span>
+            </div>
+          </div>
+        </div>
+        <div class="roi-results">
+          <div class="roi-result-label">Recoverable reporting labour cost per year</div>
+          <div class="roi-result-val" id="${roiId}_rts_total">—</div>
+          <div class="roi-result-range" id="${roiId}_rts_hrs_saved"></div>
+          <div class="roi-breakdown" id="${roiId}_rts_breakdown"></div>
+          <p class="roi-disclaimer">Based on your inputs. Assumes analytics eliminates the automatable portion entirely. A PlanIQ audit will identify exactly which reports can be automated and in what timeframe.</p>
+          <a href="javascript:void(0)" onclick="openMail('Reporting Automation Inquiry — ${d.title}','')" class="btn btn-primary" style="margin-top:1.2rem;display:inline-flex;align-items:center;gap:8px;">See What We Can Automate ${svgArr}</a>
+        </div>
+      </div>
+    </section>
+
     <div class="ind-cta">
       <div>
         <div class="overline on-dark amber" style="margin-bottom:1rem;">Ready to get started?</div>
         <h2>The numbers already know the answer. Let's make sure you do too — starting with a free, no-obligation audit.</h2>
       </div>
       <div style="display:flex;flex-direction:column;gap:.8rem;flex-shrink:0;">
-        <a href="javascript:void(0)" onclick="openMail('Free Consultation Request','')" class="btn btn-primary">Schedule Free Consultation ${svgArr}</a>
-        <button onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" class="btn btn-outline-white">Send a Message</button>
+        <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn btn-primary">Start With a Free Audit ${svgArr}</a>
+        <button onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" class="btn btn-outline-white">Send Us a Message</button>
       </div>
     </div>`;
 
-  // wire up scroll reveal for the newly built page
+  // Init ROI calculator and scroll reveals
   setTimeout(() => {
     el.querySelectorAll('.reveal').forEach(r => observer.observe(r));
-    renderIndustryCharts(key, chartId1, chartId2);
+    calcRoi(roiId);
+    calcRts(roiId);
   }, 50);
 }
 
-/* ─── Chart.js renders ─── */
-const TEAL = '#1e3a8a', AMBER = '#f97316', SLATE = '#0a0f1e';
+/* ─── ROI Calculator ─── */
+function calcRoi(id) {
+  const key = id.replace('Roi','');
+  const d = INDUSTRIES[key];
+  if (!d) return;
+  const roi = d.roiInputs;
+  const revEl = document.getElementById(id+'_rev');
+  const wasteEl = document.getElementById(id+'_waste');
+  const adminEl = document.getElementById(id+'_admin');
+  if (!revEl) return;
+  const rev = parseFloat(revEl.value)||roi.defaultRevenue;
+  const wastePct = parseFloat(wasteEl.value)||roi.defaultWaste;
+  const adminHrs = parseFloat(adminEl.value)||roi.defaultAdmin;
+  // Update slider labels
+  document.getElementById(id+'_waste_val').textContent = wastePct+'%';
+  document.getElementById(id+'_admin_val').textContent = adminHrs+' hrs';
+  // Calculate
+  const wasteRecovery = rev * (wastePct/100) * roi.recoveryRate;
+  const adminSaving = adminHrs * 52 * 65 * roi.adminRate;
+  const total = wasteRecovery + adminSaving;
+  const low = Math.round(total * 0.75);
+  const high = Math.round(total * 1.25);
+  const fmt = v => '$'+Math.round(v).toLocaleString();
+  document.getElementById(id+'_total').textContent = fmt(total);
+  document.getElementById(id+'_range').textContent = 'Conservative range: '+fmt(low)+' – '+fmt(high)+' per year';
+  document.getElementById(id+'_breakdown').innerHTML = `
+    <div class="roi-breakdown-row"><span>Operational waste recovery (${wastePct}% × ${roi.recoveryRate*100}% recovery rate)</span><span>${fmt(wasteRecovery)}/yr</span></div>
+    <div class="roi-breakdown-row"><span>Reporting & admin time saved (${adminHrs} hrs/wk × 52 wks × $65/hr × ${roi.adminRate*100}%)</span><span>${fmt(adminSaving)}/yr</span></div>`;
+}
+
+/* ─── Reporting Time Savings Calculator ─── */
+function calcRts(id) {
+  const staffEl = document.getElementById(id+'_rts_staff');
+  const hrsEl   = document.getElementById(id+'_rts_hrs');
+  const rateEl  = document.getElementById(id+'_rts_rate');
+  const autoEl  = document.getElementById(id+'_rts_auto');
+  if (!staffEl) return;
+  const staff = parseFloat(staffEl.value) || 3;
+  const hrs   = parseFloat(hrsEl.value)   || 10;
+  const rate  = parseFloat(rateEl.value)  || 65;
+  const auto  = parseFloat(autoEl.value)  || 70;
+  // Update labels
+  document.getElementById(id+'_rts_hrs_val').textContent  = hrs + ' hrs';
+  document.getElementById(id+'_rts_rate_val').textContent = '$' + rate + '/hr';
+  document.getElementById(id+'_rts_auto_val').textContent = auto + '%';
+  // Calculate
+  const weeklyHrs   = staff * hrs;
+  const annualHrs   = weeklyHrs * 52;
+  const savedHrs    = Math.round(annualHrs * (auto / 100));
+  const savedValue  = savedHrs * rate;
+  const fmt = v => '$' + Math.round(v).toLocaleString();
+  document.getElementById(id+'_rts_total').textContent    = fmt(savedValue);
+  document.getElementById(id+'_rts_hrs_saved').textContent = savedHrs.toLocaleString() + ' hours/year freed from manual reporting';
+  document.getElementById(id+'_rts_breakdown').innerHTML = `
+    <div class="roi-breakdown-row"><span>Total annual reporting hours (${staff} staff × ${hrs} hrs × 52 wks)</span><span>${annualHrs.toLocaleString()} hrs</span></div>
+    <div class="roi-breakdown-row"><span>Hours automatable at ${auto}%</span><span>${savedHrs.toLocaleString()} hrs</span></div>
+    <div class="roi-breakdown-row"><span>Value recovered at $${rate}/hr</span><span>${fmt(savedValue)}/yr</span></div>`;
+}
+
+/* ─── Chart.js renders (kept for home chart) ─── */
+const TEAL = '#c0152a', AMBER = '#f59e0b', SLATE = '#0f0d0d';
 const C = (id) => document.getElementById(id)?.getContext('2d');
 
 function renderHomeChart() {
@@ -916,7 +1134,7 @@ function renderHomeChart() {
           label: 'With PlanIQ',
           data: withPlan,
           borderColor: TEAL,
-          backgroundColor: 'rgba(30,58,138,.15)',
+          backgroundColor: 'rgba(192,21,42,.15)',
           borderWidth: 2.5,
           pointRadius: 3,
           pointBackgroundColor: TEAL,
@@ -991,7 +1209,7 @@ function renderIndustryCharts(key, id1, id2) {
       labels: d.line.labels,
       datasets: [
         { label: 'Before PlanIQ', data: d.line.before, borderColor: '#d1d5db', backgroundColor: 'rgba(209,213,219,.1)', tension: .4, pointRadius: 3 },
-        { label: 'After PlanIQ',  data: d.line.after,  borderColor: TEAL,       backgroundColor: 'rgba(30,58,138,.08)', tension: .4, pointRadius: 4, fill: true }
+        { label: 'After PlanIQ',  data: d.line.after,  borderColor: TEAL,       backgroundColor: 'rgba(192,21,42,.08)', tension: .4, pointRadius: 4, fill: true }
       ]
     },
     options: {
@@ -1008,7 +1226,7 @@ function renderIndustryCharts(key, id1, id2) {
     type: 'doughnut',
     data: {
       labels: d.donut.labels,
-      datasets: [{ data: d.donut.data, backgroundColor: [TEAL,'#2444a8','#60a5fa',AMBER,'#f59e0b'], borderWidth: 0, hoverOffset: 6 }]
+      datasets: [{ data: d.donut.data, backgroundColor: [TEAL,'#e01f38','#f87171',AMBER,'#f59e0b'], borderWidth: 0, hoverOffset: 6 }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
@@ -1024,9 +1242,11 @@ function showPage(key) {
   const target = document.getElementById('page-' + key);
   if (target) {
     target.classList.add('active');
-    if (key !== 'home') buildIndustryPage(key);
+    if (key !== 'home' && key !== 'social-proof' && key !== 'services') buildIndustryPage(key);
+    if (key === 'social-proof' && !window._homeChartBuilt) {
+      setTimeout(() => { renderHomeChart(); window._homeChartBuilt = true; }, 80);
+    }
     window.scrollTo({ top: 0 });
-    // Re-observe any reveals on the newly shown page
     setTimeout(() => {
       target.querySelectorAll('.reveal:not(.in)').forEach(el => {
         const rect = el.getBoundingClientRect();
@@ -1041,28 +1261,37 @@ function showPage(key) {
 }
 
 /* ─── Nav scroll raise ─── */
-window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('raised', window.scrollY > 20));
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (nav) nav.classList.toggle('raised', window.scrollY > 20);
+});
 
 /* ─── Industries dropdown toggle ─── */
 function toggleDropdown(e) {
   e.stopPropagation();
   const menu  = document.getElementById('indMenu');
   const arrow = document.getElementById('indArrow');
+  if (!menu || !arrow) return;
   const isOpen = menu.classList.toggle('open');
   arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0)';
   arrow.style.transition = 'transform .2s';
 }
 function navToIndustry(key) {
-  // close dropdown first
-  document.getElementById('indMenu').classList.remove('open');
-  document.getElementById('indArrow').style.transform = 'rotate(0)';
+  const menu  = document.getElementById('indMenu');
+  const arrow = document.getElementById('indArrow');
+  if (menu)  menu.classList.remove('open');
+  if (arrow) arrow.style.transform = 'rotate(0)';
   showPage(key);
 }
 // Close dropdown when clicking anywhere else
 document.addEventListener('click', (e) => {
-  if (!document.getElementById('indDropdown').contains(e.target)) {
-    document.getElementById('indMenu').classList.remove('open');
-    document.getElementById('indArrow').style.transform = 'rotate(0)';
+  const dd = document.getElementById('indDropdown');
+  if (!dd) return;
+  if (!dd.contains(e.target)) {
+    const menu  = document.getElementById('indMenu');
+    const arrow = document.getElementById('indArrow');
+    if (menu)  menu.classList.remove('open');
+    if (arrow) arrow.style.transform = 'rotate(0)';
   }
 });
 
@@ -1108,12 +1337,11 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ─── Init home chart + reveal in-viewport elements on load ─── */
-window.addEventListener('load', function() {
-  renderHomeChart();
-  document.querySelectorAll('.reveal').forEach(function(el) {
-    var r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight + 100) { el.classList.add('in'); }
+/* ─── Init reveals on load ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) el.classList.add('in');
   });
 });
 </script>
