@@ -160,13 +160,13 @@ nav.raised{box-shadow:0 2px 28px rgba(192,21,42,.12);}
 }
 .hero-photo{
   position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1800&q=85&fit=crop') center/cover no-repeat;
-  opacity:.12;transition:transform 12s ease;
+  background:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1800&q=90&fit=crop') center/cover no-repeat;
+  opacity:.18;transition:transform 12s ease;
 }
 .hero:hover .hero-photo{transform:scale(1.04);}
 .hero::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(120deg,rgba(15,13,13,.97) 0%,rgba(15,13,13,.82) 50%,rgba(60,0,5,.75) 100%);
+  background:linear-gradient(120deg,rgba(15,13,13,.96) 0%,rgba(15,13,13,.78) 45%,rgba(60,0,5,.82) 100%);
   z-index:1;pointer-events:none;
 }
 .hero-bg-accent{
@@ -660,15 +660,7 @@ footer{background:var(--slate);padding:76px 5% 40px;}
 .ind-cta h2{font-family:var(--font-serif);font-size:clamp(1.6rem,2.5vw,2.3rem);
   font-weight:400;color:var(--white);line-height:1.2;max-width:520px;}
 
-/* ═══════════════════════ ABOUT / FILMSTRIP ═══════════════════════ */
-.filmstrip{display:grid;grid-template-columns:repeat(4,1fr);height:240px;gap:3px;background:var(--slate);}
-.fs-cell{position:relative;overflow:hidden;}
-.fs-cell img{width:100%;height:100%;object-fit:cover;opacity:.6;filter:saturate(80%);
-  transition:opacity .4s,transform .5s var(--ease),filter .4s;}
-.fs-cell:hover img{opacity:.9;transform:scale(1.06);filter:saturate(115%);}
-.fs-label{position:absolute;bottom:0;left:0;right:0;padding:7px 12px;
-  font-family:var(--font-mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(255,255,255,.55);background:linear-gradient(transparent,rgba(10,15,30,.75));}
+/* ═══════════════════════ ABOUT ═══════════════════════ */
 
 .about-split{display:grid;grid-template-columns:1fr 1fr;}
 .about-img{height:620px;position:relative;overflow:hidden;}
@@ -762,7 +754,6 @@ footer{background:var(--slate);padding:76px 5% 40px;}
   .ind-svc-grid{grid-template-columns:1fr 1fr;}.ind-chart-grid{grid-template-columns:1fr;}
   .ind-outcomes-grid{grid-template-columns:1fr 1fr;}.value-strip{grid-template-columns:1fr 1fr;}
   .chal-grid{grid-template-columns:1fr;}.roi-wrap{grid-template-columns:1fr;gap:32px;}
-  .filmstrip{grid-template-columns:1fr 1fr;height:auto;}.fs-cell{height:110px;}
   .why-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:720px){
