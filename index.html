@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PlanIQ — Business Intelligence &amp; Analytics Consulting</title>
-<meta name="description" content="PlanIQ — Business Intelligence & Analytics Consulting. Built in Michigan, serving organisations nationwide."/>
+<title>Plan AIQ — Business Intelligence &amp; Analytics Consulting</title>
+<meta name="description" content="Plan AIQ — Business Intelligence & Analytics Consulting. Built in Michigan, serving organisations nationwide."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 /* Offline font fallbacks — used when Google Fonts cannot load */
 :root{
-  --font-serif-fallback: 'Palatino Linotype','Book Antiqua',Palatino,'Times New Roman',Times,serif;
+  --font-serif-fallback: 'Book Antiqua',Palatino,'Times New Roman',Times,serif;
   --font-sans-fallback: -apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   --font-mono-fallback: 'Courier New',Courier,monospace;
 }
@@ -21,20 +21,20 @@
 /* ═══════════════════════ TOKENS ═══════════════════════ */
 :root{
   /* ─── Primary: Crimson Steel ─── */
-  --teal:#8A1C1C;--teal-deep:#5E1212;--teal-mid:#A82424;
-  --teal-lt:#F9EDED;--teal-glow:rgba(138,28,28,.2);
+  --teal:#991818;--teal-deep:#6B0F0F;--teal-mid:#B52020;
+  --teal-lt:#EEF2FF;--teal-glow:rgba(153,24,24,.2);
   /* ─── Accent: Amber Gold ─── */
   --amber:#f59e0b;--amber-lt:#fffbeb;--amber-deep:#d97706;
   /* ─── Dark Foundation ─── */
-  --slate:#100C0C;--slate-mid:#1C1010;--slate-light:#2E1A1A;
+  --slate:#0F1A2E;--slate-mid:#162035;--slate-light:#1E2E4A;
   /* ─── Neutrals ─── */
-  --ink:#1A0E0E;--ink-70:rgba(26,14,14,.80);--ink-45:rgba(26,14,14,.55);
-  --ink-15:rgba(26,14,14,.12);
-  --fog:#FAF0F0;--fog-warm:#F5E0E0;--white:#ffffff;
-  --rule:#E2C8C8;
+  --ink:#0F1A2E;--ink-70:rgba(15,26,46,.80);--ink-45:rgba(15,26,46,.55);
+  --ink-15:rgba(15,26,46,.12);
+  --fog:#F4F6FA;--fog-warm:#EEF1F8;--white:#ffffff;
+  --rule:#DDE4F0;
   /* ─── Typography ─── */
-  --font-serif:'Fraunces','Palatino Linotype','Book Antiqua',Palatino,Georgia,serif;
-  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --font-serif:'Lora','Book Antiqua',Palatino,Georgia,serif;
+  --font-sans:'Nunito Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
   --font-mono:'JetBrains Mono','Courier New',Courier,monospace;
   --ease:cubic-bezier(.4,0,.2,1);
 }
@@ -67,7 +67,7 @@ h2.headline.on-dark em{font-style:normal;color:#D48080;}
 .prose strong{font-weight:600;color:var(--ink);}
 .prose.on-dark{color:rgba(255,255,255,.82);}
 p{color:var(--ink-70);}
-.hero-desc{font-size:1rem;font-weight:400;line-height:1.78;color:#1a3530 !important;max-width:490px;margin-bottom:2.4rem;}
+.hero-desc{font-size:1rem;font-weight:400;line-height:1.78;color:#0F1A2E !important;max-width:490px;margin-bottom:2.4rem;}
 .hero-desc strong{font-weight:700;color:var(--slate) !important;}
 
 /* ═══════════════════════ BUTTONS ═══════════════════════ */
@@ -77,7 +77,7 @@ p{color:var(--ink-70);}
   transition:background .2s,color .2s,transform .15s,box-shadow .2s;}
 .btn-primary{background:var(--teal);color:var(--white);border-radius:8px;
   font-size:.88rem;font-weight:700;letter-spacing:.02em;padding:14px 32px;}
-.btn-primary:hover{background:var(--teal-mid);transform:translateY(-2px);box-shadow:0 8px 24px rgba(138,28,28,.35);}
+.btn-primary:hover{background:var(--teal-mid);transform:translateY(-2px);box-shadow:0 8px 24px rgba(153,24,24,.35);}
 .btn-amber{background:var(--amber);color:var(--white);}
 .btn-amber:hover{background:var(--amber-deep);transform:translateY(-1px);}
 .btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--rule);}
@@ -128,7 +128,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:900;height:70px;
   display:flex;align-items:center;justify-content:space-between;padding:0 5%;
   background:rgba(255,255,255,.98);backdrop-filter:blur(16px);
   border-bottom:1px solid var(--rule);transition:box-shadow .3s;}
-nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
+nav.raised{box-shadow:0 2px 28px rgba(153,24,24,.12);}
 .nav-brand{display:flex;align-items:center;gap:14px;cursor:pointer;padding:6px 10px 6px 4px;border-radius:8px;transition:background .2s;}
 .nav-brand:hover{background:var(--fog);}
 .planiq-mark{width:48px;height:48px;background:transparent;display:flex;align-items:center;
@@ -137,8 +137,8 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
 .nav-brand-text{display:flex;flex-direction:column;gap:3px;}
 .nav-brand-wordmark{font-family:var(--font-serif);font-size:1.55rem;font-weight:600;
   color:var(--slate);letter-spacing:-.03em;line-height:1;}
-.nav-brand-wordmark .iq{color:#7A0000;font-style:italic;}
-.nav-brand-sub{font-family:var(--font-sans);font-size:.6rem;font-weight:700;
+.nav-brand-wordmark .aiq{color:#991818;font-style:italic;}
+.nav-brand-sub{font-family:var(--font-sans);font-size:.58rem;font-weight:700;
   letter-spacing:.09em;text-transform:uppercase;color:var(--teal-deep);}
 .nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none;}
 .nav-links a,.nav-links button{font-size:.78rem;font-weight:500;color:var(--ink-70);
@@ -151,7 +151,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
 .nav-dropdown-menu{
   display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
   margin-top:8px;background:var(--white);border:1px solid var(--rule);
-  border-radius:6px;box-shadow:0 8px 32px rgba(10,15,30,.12);
+  border-radius:6px;box-shadow:0 8px 32px rgba(15,26,46,.12);
   min-width:260px;z-index:999;padding:8px 0;
 }
 .nav-dropdown-menu.open{display:block !important;}
@@ -203,7 +203,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
 .hero:hover .hero-right-img{transform:scale(1.04);}
 .hero-right-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(10,8,8,.78) 0%,rgba(90,0,0,.35) 55%,rgba(10,8,8,.92) 100%);
+  background:linear-gradient(160deg,rgba(10,16,28,.78) 0%,rgba(15,26,46,.35) 55%,rgba(10,16,28,.92) 100%);
 }
 .hero-right-content{
   position:relative;z-index:2;height:100%;
@@ -227,7 +227,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
   border:1px solid rgba(255,255,255,.07);
 }
 .hkpi{
-  background:rgba(10,8,8,.55);backdrop-filter:blur(12px);
+  background:rgba(10,16,28,.55);backdrop-filter:blur(12px);
   padding:20px 18px;
 }
 .hkpi-val{
@@ -491,7 +491,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
 .ind-hub-card:hover .ind-hub-img{opacity:.42;transform:scale(1.07);filter:saturate(55%);}
 .ind-hub-veil{position:absolute;inset:0;
   background:linear-gradient(180deg,transparent 20%,rgba(15,31,46,.92) 100%);transition:background .35s;}
-.ind-hub-card:hover .ind-hub-veil{background:linear-gradient(180deg,rgba(138,28,28,.15) 0%,rgba(50,10,10,.95) 60%);}
+.ind-hub-card:hover .ind-hub-veil{background:linear-gradient(180deg,rgba(153,24,24,.15) 0%,rgba(15,26,46,.95) 60%);}
 .ind-hub-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
   background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
 .ind-hub-card:hover::after{transform:scaleX(1);}
@@ -566,7 +566,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
 .cta-banner-bg{position:absolute;inset:0;
   background:url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1400&q=60') center/cover no-repeat;opacity:.04;}
 .cta-banner::before{content:'';position:absolute;right:-6%;top:-50%;width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(138,28,28,.15) 0%,transparent 70%);pointer-events:none;}
+  background:radial-gradient(circle,rgba(153,24,24,.15) 0%,transparent 70%);pointer-events:none;}
 .cta-banner::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber);}
 .cta-banner h2{font-family:var(--font-serif);font-size:clamp(1.6rem,2.8vw,2.5rem);
   font-weight:400;line-height:1.18;color:var(--white);position:relative;}
@@ -600,7 +600,7 @@ nav.raised{box-shadow:0 2px 28px rgba(138,28,28,.12);}
   opacity:.35;transition:transform 8s;}
 .contact-visual:hover .contact-visual-img{transform:scale(1.04);}
 .contact-visual-overlay{position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(35,8,8,.6) 0%,rgba(50,10,10,.88) 100%);}
+  background:linear-gradient(160deg,rgba(10,18,32,.6) 0%,rgba(15,26,46,.88) 100%);}
 .contact-visual-body{position:relative;z-index:2;height:100%;
   display:flex;flex-direction:column;justify-content:flex-end;padding:52px;}
 .contact-visual-body h3{font-family:var(--font-serif);font-size:1.7rem;font-weight:400;
@@ -637,7 +637,7 @@ footer{background:var(--slate);padding:76px 5% 40px;}
 .footer-mark{width:36px;height:36px;background:transparent;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:0;}
 .footer-wordmark{font-family:var(--font-serif);font-size:1.1rem;font-weight:500;color:var(--white);}
-.footer-wordmark .iq{color:#7A0000;font-style:italic;}
+.footer-wordmark .aiq{color:#991818;font-style:italic;}
 .footer-tagline-text{font-size:.8rem;color:rgba(255,255,255,.38);font-style:italic;
   font-family:var(--font-serif);margin-bottom:.7rem;font-weight:300;}
 .footer-desc{font-size:.8rem;color:rgba(255,255,255,.26);line-height:1.72;max-width:290px;}
@@ -695,7 +695,7 @@ footer{background:var(--slate);padding:76px 5% 40px;}
 .ind-chart-section{padding:80px 5%;background:var(--fog);}
 .ind-chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:50px;}
 .ind-chart-card{background:var(--white);border:1px solid var(--rule);border-radius:8px;
-  padding:32px;box-shadow:0 2px 12px rgba(10,15,30,.05);}
+  padding:32px;box-shadow:0 2px 12px rgba(15,26,46,.05);}
 .ind-chart-card h3{font-family:var(--font-serif);font-size:1rem;font-weight:500;
   color:var(--slate);margin-bottom:.3rem;}
 .ind-chart-card p{font-size:.8rem;color:var(--ink-45);margin-bottom:20px;}
@@ -742,7 +742,7 @@ footer{background:var(--slate);padding:76px 5% 40px;}
 .loc-line{display:flex;align-items:center;gap:8px;font-size:.74rem;color:var(--ink-45);margin-top:.9rem;}
 .loc-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;
   animation:pulse 2.2s infinite;}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(138,28,28,.4);}70%{box-shadow:0 0 0 9px rgba(138,28,28,0);}100%{box-shadow:0 0 0 0 rgba(138,28,28,0);}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(153,24,24,.4);}70%{box-shadow:0 0 0 9px rgba(153,24,24,0);}100%{box-shadow:0 0 0 0 rgba(153,24,24,0);}}
 
 /* ═══════════════════════ ANIMATIONS ═══════════════════════ */
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
@@ -946,8 +946,8 @@ footer{background:var(--slate);padding:76px 5% 40px;}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.06);}
 .why-card{background:rgba(255,255,255,.03);padding:40px 34px;border-bottom:2px solid transparent;transition:background .25s,border-color .25s;}
 .why-card:hover{background:rgba(255,255,255,.07);border-bottom-color:var(--teal);}
-.why-icon{width:46px;height:46px;border-radius:4px;background:rgba(138,28,28,.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;transition:background .25s;}
-.why-card:hover .why-icon{background:rgba(138,28,28,.45);}
+.why-icon{width:46px;height:46px;border-radius:4px;background:rgba(153,24,24,.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem;transition:background .25s;}
+.why-card:hover .why-icon{background:rgba(153,24,24,.45);}
 .why-icon svg{width:20px;height:20px;stroke:#D48080;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
 .why-title{font-family:var(--font-serif);font-size:.98rem;font-weight:500;color:var(--white);margin-bottom:.5rem;}
 .why-desc{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.7;}
@@ -1023,7 +1023,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div class="nav-brand" onclick="showPage('home')">
     <div class="planiq-mark">
       <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="44" height="44" rx="7" fill="#7A0000"/>
+        <rect width="44" height="44" rx="7" fill="#991818"/>
         <line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
         <path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         <line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
@@ -1031,7 +1031,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
       </svg>
     </div>
     <div class="nav-brand-text">
-      <div class="nav-brand-wordmark">Plan<span class="iq">IQ</span></div>
+      <div class="nav-brand-wordmark">Plan<span class="aiq">AIQ</span></div>
       <span class="nav-brand-sub">Business Intelligence &amp; Analytics Consulting</span>
     </div>
   </div>
@@ -1071,7 +1071,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <div class="hero-content">
       <div class="hero-overline fade-up">Business Intelligence &amp; Analytics — Michigan</div>
       <h1 class="hero-h1 fade-up fu-1">Data Intelligence That<br>Drives <span class="accent">Real</span><br>Business Outcomes.</h1>
-      <p class="hero-sub fade-up fu-2">Businesses today struggle with fragmented systems and gut-feel decisions. Stop guessing. Unlock clarity. <strong>PlanIQ transforms your data into actionable insights</strong> by turning disconnected systems and operational pressure into clear analytics, practical workflows, and measurable results.</p>
+      <p class="hero-sub fade-up fu-2">Businesses today struggle with fragmented systems and gut-feel decisions. Stop guessing. Unlock clarity. <strong>Plan AIQ transforms your data into actionable insights</strong> by turning disconnected systems and operational pressure into clear analytics, practical workflows, and measurable results.</p>
 
       <!-- Location line matching image 2 -->
       <p class="hero-location fade-up fu-2"><span>Built in Michigan.</span> Serving organisations nationwide.</p>
@@ -1140,8 +1140,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div>
     <div class="overline reveal" style="margin-bottom:1.4rem;">Who We Are</div>
     <h2 class="headline reveal" style="margin-bottom:1.4rem;">Built in Michigan.<br><em>Trusted Across America.</em></h2>
-    <p class="reveal" style="font-size:1rem;color:#1a3530;line-height:1.82;margin-bottom:1rem;">PlanIQ was founded in <strong>Port Huron, Michigan</strong> by people who understand operations firsthand — not just theory. We built this firm because we kept seeing the same problem everywhere: businesses sitting on mountains of valuable data with no practical way to turn it into decisions.</p>
-    <p class="reveal" style="font-size:1rem;color:#1a3530;line-height:1.82;margin-bottom:1.8rem;">We don't sell expensive platforms or jargon-heavy frameworks. We deliver <strong>practical analytics, clear reporting, and honest consulting</strong> your team can act on from day one. Our goal is always your independence — not your dependency.</p>
+    <p class="reveal" style="font-size:1rem;color:#0F1A2E;line-height:1.82;margin-bottom:1rem;">Plan AIQ was founded in <strong>Port Huron, Michigan</strong> by people who understand operations firsthand — not just theory. We built this firm because we kept seeing the same problem everywhere: businesses sitting on mountains of valuable data with no practical way to turn it into decisions.</p>
+    <p class="reveal" style="font-size:1rem;color:#0F1A2E;line-height:1.82;margin-bottom:1.8rem;">We don't sell expensive platforms or jargon-heavy frameworks. We deliver <strong>practical analytics, clear reporting, and honest consulting</strong> your team can act on from day one. Our goal is always your independence — not your dependency.</p>
     <div class="reveal" style="display:flex;gap:2rem;padding-top:1.5rem;border-top:1px solid var(--rule);">
       <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">10<span style="font-style:normal;color:var(--amber);">+</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Years Experience</div></div>
       <div><div style="font-family:var(--font-serif);font-size:2rem;font-weight:400;color:var(--teal);line-height:1;">6<span style="font-style:normal;color:var(--amber);">+</span></div><div style="font-size:.72rem;color:var(--ink-45);margin-top:4px;letter-spacing:.03em;">Industries Served</div></div>
@@ -1150,7 +1150,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     </div>
   </div>
   <div class="reveal" style="position:relative;overflow:hidden;border-radius:4px;">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=90&fit=crop&crop=faces,center" alt="PlanIQ team" onerror="this.style.background='#1C1010';this.src=''" style="width:100%;height:420px;object-fit:cover;object-position:center top;border-radius:4px;display:block;"/>
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=90&fit=crop&crop=faces,center" alt="Plan AIQ team" onerror="this.style.background='#1C1010';this.src=''" style="width:100%;height:420px;object-fit:cover;object-position:center top;border-radius:4px;display:block;"/>
     <div style="position:absolute;top:28px;right:0;background:var(--teal);color:var(--white);padding:16px 22px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;gap:3px;border-radius:4px 0 0 4px;">
       <span>Built in</span><strong style="font-size:1.6rem;font-family:var(--font-serif);font-weight:400;font-style:italic;">Michigan</strong>
     </div>
@@ -1166,7 +1166,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <!-- OUR APPROACH — moved to replace Problem We Solve -->
 <section class="process dark" style="background:var(--slate);position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=60&fit=crop') center/cover no-repeat;opacity:.07;pointer-events:none;"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,13,13,.95) 0%,rgba(35,8,8,.85) 100%);pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,18,34,.95) 0%,rgba(10,18,32,.85) 100%);pointer-events:none;"></div>
   <div style="position:relative;z-index:1;">
   <div class="overline on-dark reveal">Our Approach</div>
   <h2 class="headline on-dark reveal" style="margin-top:1.2rem;">Four Steps from Audit to Intelligence</h2>
@@ -1183,8 +1183,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <!-- WHY PLANIQ -->
 <section id="why-anchor" style="background:var(--slate);padding:100px 5%;min-height:200px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=60&fit=crop') center/cover no-repeat;opacity:.06;pointer-events:none;"></div>
-  <div class="overline on-dark reveal">Why PlanIQ</div>
-  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;margin-bottom:52px;">Six Reasons Clients Choose PlanIQ Over Every Other Option</h2>
+  <div class="overline on-dark reveal">Why Plan AIQ</div>
+  <h2 class="headline on-dark reveal" style="margin-top:1.2rem;margin-bottom:52px;">Six Reasons Clients Choose Plan AIQ Over Every Other Option</h2>
   <div class="why-grid">
     <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D48080" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="why-title">Floor-Level Context</div><div class="why-desc">We start every engagement on-site — not in a slide deck. Every recommendation comes from what we actually observe.</div><div class="why-tagline">No templates. No assumptions.</div></div>
     <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D48080" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="why-title">Speed Without Shortcuts</div><div class="why-desc">Live dashboards in 2–4 weeks, measurable ROI in 60–90 days — because we do the hard diagnostic work upfront.</div><div class="why-tagline">Clarity, not complexity.</div></div>
@@ -1278,7 +1278,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div>
     <div class="overline amber">Ready to start?</div>
     <h2 style="margin-top:1rem;">The Gap Between What You Know and What's Actually Happening Is Costing You More Than You Think.</h2>
-    <p class="cta-sub">Most businesses are running on incomplete information — and the difference between what leadership believes is true and what the data actually shows is where profit quietly disappears. A free PlanIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
+    <p class="cta-sub">Most businesses are running on incomplete information — and the difference between what leadership believes is true and what the data actually shows is where profit quietly disappears. A free Plan AIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
   </div>
   <div class="cta-actions">
     <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
@@ -1300,8 +1300,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <div class="contact-visual-body">
       <h3>Let's Talk About Your Business</h3>
       <div class="c-detail"><div class="c-ico">📍</div><div><div class="c-lbl">Location</div><div class="c-val">Port Huron, Michigan · Serving Nationwide</div></div></div>
-      <div class="c-detail"><div class="c-ico">📞</div><div><div class="c-lbl">Phone</div><div class="c-val">(810) 937-9864</div></div></div>
-      <div class="c-detail"><div class="c-ico">✉️</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')" style="color:rgba(255,255,255,.78);"><span class="__cf_email__" data-cfemail="9df4f3fbf2ddedf1fcf3f4ecb3fef2f0">[email&#160;protected]</span></a></div></div></div>
+      <div class="c-detail" id="phone-detail"><div class="c-ico">📞</div><div><div class="c-lbl">Phone <button onclick="togglePhone()" style="background:none;border:none;cursor:pointer;font-size:.6rem;color:rgba(255,255,255,.38);margin-left:6px;padding:0;font-family:var(--font-sans);" id="phone-toggle-btn">hide</button></div><div class="c-val" id="phone-val">(810) 937-9864</div></div></div>
+      <div class="c-detail"><div class="c-ico">✉️</div><div><div class="c-lbl">Email</div><div class="c-val"><a href="mailto:info@planaiq.com?subject=Plan AIQ Enquiry" style="color:rgba(255,255,255,.78);">info@planaiq.com</a></div></div></div>
       <a href="javascript:void(0)" onclick="openMail('Book a Consultation','')" class="btn btn-white">Book a Consultation →</a>
     </div>
   </div>
@@ -1330,8 +1330,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div class="footer-top">
     <div>
       <div class="footer-brand-row">
-        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#7A0000"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
-        <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
+        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#991818"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
+        <div class="footer-wordmark">Plan<span class="aiq">AIQ</span></div>
       </div>
       <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
       <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
@@ -1359,15 +1359,15 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="tel:8109379864">(810) 937-9864</a></li>
-        <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')"><span class="__cf_email__" data-cfemail="71181f171e31011d101f18005f121e1c">[email&#160;protected]</span></a></li>
+        <li id="footer-phone" style="transition:opacity .2s"><a href="tel:8109379864" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">(810) 937-9864</a></li>
+        <li><a href="mailto:info@planaiq.com?subject=Plan AIQ Enquiry" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">info@planaiq.com</a></li>
         <li><a href="javascript:void(0)">Port Huron, MI</a></li>
         <li><a href="javascript:void(0)" onclick="openMail('Free Audit Request','')">Start a Free Audit</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 PlanIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
+    <div class="footer-copy">© 2025 Plan AIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
     <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
   </div>
 </footer>
@@ -1386,9 +1386,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <!-- Page Hero -->
 <section style="background:var(--slate);padding:130px 5% 80px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;"></div>
-  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(138,28,28,.2) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(153,24,24,.2) 0%,transparent 65%);pointer-events:none;"></div>
   <div style="position:relative;z-index:2;max-width:760px;">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(138,28,28,.18);border:1px solid rgba(138,28,28,.35);color:#E8AAAA;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">What We Do</div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(153,24,24,.18);border:1px solid rgba(153,24,24,.35);color:#E8AAAA;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">What We Do</div>
     <h1 style="font-family:var(--font-serif);font-size:clamp(2.4rem,4vw,3.6rem);font-weight:400;line-height:1.08;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem;">Twelve Ways We Turn<br><span style="color:var(--amber);font-style:italic;">Data Into Competitive Advantage.</span></h1>
     <p style="font-size:1.05rem;color:rgba(255,255,255,.78);line-height:1.78;max-width:600px;margin-bottom:2rem;">Every service is built around one goal: giving your team the clarity to make better decisions, win more business, and grow with confidence. All engagements begin with a free audit — no commitment required.</p>
     <button onclick="showPage('home')" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:10px 22px;font-family:var(--font-sans);font-size:.8rem;font-weight:600;cursor:pointer;border-radius:3px;letter-spacing:.04em;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.6)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='rgba(255,255,255,.75)'">← Back to Home</button>
@@ -1567,7 +1567,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div>
     <div class="overline amber">Ready to start?</div>
     <h2 style="margin-top:1rem;">Not sure which services apply to your operation? Start with a free audit and we'll tell you exactly what you need.</h2>
-    <p class="cta-sub">Every engagement begins with PlanIQ walking your operation. We map your data, identify the gaps, and recommend only the services that will deliver measurable value for your specific business.</p>
+    <p class="cta-sub">Every engagement begins with Plan AIQ walking your operation. We map your data, identify the gaps, and recommend only the services that will deliver measurable value for your specific business.</p>
   </div>
   <div class="cta-actions">
     <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
@@ -1583,8 +1583,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div class="footer-top">
     <div>
       <div class="footer-brand-row">
-        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#7A0000"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
-        <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
+        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#991818"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
+        <div class="footer-wordmark">Plan<span class="aiq">AIQ</span></div>
       </div>
       <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
       <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
@@ -1611,14 +1611,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="tel:8109379864">(810) 937-9864</a></li>
-        <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')"><span class="__cf_email__" data-cfemail="94fdfaf2fbd4e4f8f5fafde5baf7fbf9">[email&#160;protected]</span></a></li>
+        <li id="footer-phone" style="transition:opacity .2s"><a href="tel:8109379864" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">(810) 937-9864</a></li>
+        <li><a href="mailto:info@planaiq.com?subject=Plan AIQ Enquiry" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">info@planaiq.com</a></li>
         <li><a href="javascript:void(0)">Port Huron, MI</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 PlanIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
+    <div class="footer-copy">© 2025 Plan AIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
     <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
   </div>
 </footer>
@@ -1640,9 +1640,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <!-- Page Hero -->
 <section style="background:var(--slate);padding:130px 5% 80px;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none;"></div>
-  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(138,28,28,.2) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;right:-8%;top:-20%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(153,24,24,.2) 0%,transparent 65%);pointer-events:none;"></div>
   <div style="position:relative;z-index:2;max-width:760px;">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(138,28,28,.18);border:1px solid rgba(138,28,28,.35);color:#E8AAAA;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">Success Stories</div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(153,24,24,.18);border:1px solid rgba(153,24,24,.35);color:#E8AAAA;font-family:var(--font-mono);font-size:.65rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px;border-radius:3px;margin-bottom:1.6rem;">Success Stories</div>
     <h1 style="font-family:var(--font-serif);font-size:clamp(2.6rem,4.5vw,4rem);font-weight:400;line-height:1.06;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem;">Proof Before You<br><span style="color:var(--amber);font-style:italic;">Commit to a Single Dollar.</span></h1>
     <p style="font-size:1.05rem;color:rgba(255,255,255,.78);line-height:1.78;max-width:600px;margin-bottom:2rem;">Real results, real client voices, and straight answers to every question we get asked — so you can make a confident, informed decision before we even meet.</p>
     <button onclick="showPage('home')" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:10px 22px;font-family:var(--font-sans);font-size:.8rem;font-weight:600;cursor:pointer;border-radius:3px;letter-spacing:.04em;transition:border-color .2s,color .2s;" onmouseover="this.style.borderColor='rgba(255,255,255,.6)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='rgba(255,255,255,.75)'">← Back to Home</button>
@@ -1652,20 +1652,20 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <!-- CLIENT RESULTS CHART — moved from home page -->
 <section style="background:var(--slate);padding:80px 5%;border-top:1px solid rgba(255,255,255,.06);">
   <div class="overline on-dark reveal" style="margin-bottom:1.4rem;">12-Month Trajectory</div>
-  <h2 class="headline on-dark reveal" style="margin-bottom:1rem;">Client Results — Operational Performance Before &amp; After PlanIQ</h2>
+  <h2 class="headline on-dark reveal" style="margin-bottom:1rem;">Client Results — Operational Performance Before &amp; After Plan AIQ</h2>
   <p class="prose on-dark reveal" style="max-width:600px;margin-bottom:3rem;">Average composite score across cost efficiency, reporting speed &amp; decision accuracy. Clients who act within 30 days see a <strong style="color:#fff;">34% average improvement</strong> within the first quarter.</p>
   <div style="max-width:860px;">
     <div class="problem-chart-card reveal">
       <div class="chart-eyebrow">Live Client Data</div>
-      <div class="chart-title">Operational Performance Index — Before &amp; After PlanIQ</div>
+      <div class="chart-title">Operational Performance Index — Before &amp; After Plan AIQ</div>
       <div class="chart-sub">Average composite score across 6 key performance dimensions</div>
       <div class="chart-canvas-wrap"><canvas id="homeChart1"></canvas></div>
       <div class="chart-legend">
         <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#6b7280"></div>Without analytics</div>
-        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#8A1C1C"></div>With PlanIQ</div>
+        <div class="chart-legend-item"><div class="chart-legend-dot" style="background:#991818"></div>With Plan AIQ</div>
       </div>
       <div class="chart-insight">
-        Clients who act on PlanIQ audit recommendations within 30 days see a
+        Clients who act on Plan AIQ audit recommendations within 30 days see a
         <strong>34% average improvement in operational performance</strong> within the first quarter.
       </div>
     </div>
@@ -1676,10 +1676,10 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <section class="impact" style="background:var(--fog);">
   <div class="overline reveal">Proven Impact</div>
   <h2 class="headline reveal" style="margin-top:1.2rem;">Numbers That Speak for Themselves</h2>
-  <p class="prose reveal" style="max-width:580px;margin-top:1rem;color:#1a3530;">These aren't projections. They are real averages drawn from client engagements across every industry we serve.</p>
+  <p class="prose reveal" style="max-width:580px;margin-top:1rem;color:#0F1A2E;">These aren't projections. They are real averages drawn from client engagements across every industry we serve.</p>
   <div class="impact-grid" style="margin-top:3rem;">
     <div class="impact-card reveal"><span class="impact-num">$150K+</span><div class="impact-label">Losses uncovered per first audit</div><div class="impact-desc">Average hidden inefficiency value identified across all client first-engagement audits in Year 1</div></div>
-    <div class="impact-card reveal"><span class="impact-num">34%</span><div class="impact-label">Mean reduction in operating costs</div><div class="impact-desc">Clients who implement PlanIQ recommendations within the first quarter achieve this on average</div></div>
+    <div class="impact-card reveal"><span class="impact-num">34%</span><div class="impact-label">Mean reduction in operating costs</div><div class="impact-desc">Clients who implement Plan AIQ recommendations within the first quarter achieve this on average</div></div>
     <div class="impact-card reveal"><span class="impact-num">14</span><div class="impact-label">Days to your first working dashboard</div><div class="impact-desc">From signed agreement to live, real-time reporting — a fraction of the typical enterprise timeline</div></div>
     <div class="impact-card reveal"><span class="impact-num">97%</span><div class="impact-label">Clients who take action within 30 days</div><div class="impact-desc">Of the written audit report delivery — because the findings are clear, costed, and ready to act on</div></div>
   </div>
@@ -1689,11 +1689,11 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
 <section class="testimonials" style="background:var(--white);">
   <div class="overline reveal">Client Voices</div>
   <h2 class="headline reveal" style="margin-top:1.2rem;">What Clients Say After the First 90 Days</h2>
-  <p class="prose reveal" style="max-width:560px;margin-top:1rem;color:#1a3530;">Real words from real clients. Every quote below comes from a business owner or operations leader who started exactly where you are now.</p>
+  <p class="prose reveal" style="max-width:560px;margin-top:1rem;color:#0F1A2E;">Real words from real clients. Every quote below comes from a business owner or operations leader who started exactly where you are now.</p>
   <div class="test-grid" style="margin-top:3rem;">
-    <div class="test-card reveal"><p class="test-quote">"PlanIQ found $80,000 in annual waste in our first audit that we didn't even know existed. That paid for three years of their services in one report."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">RK</div><div><div class="test-name">Randy Kowalski</div><div class="test-role">Plant Manager, Blue Water Stamping</div></div></div></div>
+    <div class="test-card reveal"><p class="test-quote">"Plan AIQ found $80,000 in annual waste in our first audit that we didn't even know existed. That paid for three years of their services in one report."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">RK</div><div><div class="test-name">Randy Kowalski</div><div class="test-role">Plant Manager, Blue Water Stamping</div></div></div></div>
     <div class="test-card reveal"><p class="test-quote">"Our inventory used to be a guessing game. Now we have live visibility across all three warehouses and reorder happens automatically. Stockouts are gone."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">DT</div><div><div class="test-name">Diane Tompkins</div><div class="test-role">VP Operations, Marysville Fabricators</div></div></div></div>
-    <div class="test-card reveal"><p class="test-quote">"The dashboard PlanIQ built for our sales team increased rep performance by 22% in 60 days. Everyone could finally see the same numbers in real time."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">JM</div><div><div class="test-name">Jim Mulvaney</div><div class="test-role">CEO, Great Lakes Distribution</div></div></div></div>
+    <div class="test-card reveal"><p class="test-quote">"The dashboard Plan AIQ built for our sales team increased rep performance by 22% in 60 days. Everyone could finally see the same numbers in real time."</p><div class="test-divider"></div><div class="test-author"><div class="test-avatar">JM</div><div><div class="test-name">Jim Mulvaney</div><div class="test-role">CEO, Great Lakes Distribution</div></div></div></div>
   </div>
 </section>
 
@@ -1702,7 +1702,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div class="faq-left reveal">
     <div class="overline" style="margin-bottom:1.2rem;">FAQ</div>
     <h2 class="headline">Questions We Get Asked Every Week</h2>
-    <p style="font-size:.9rem;color:#1a3530;line-height:1.78;margin-top:1.2rem;margin-bottom:2rem;">Straight answers about what we do, how it works, and what you can expect — no fluff.</p>
+    <p style="font-size:.9rem;color:#0F1A2E;line-height:1.78;margin-top:1.2rem;margin-bottom:2rem;">Straight answers about what we do, how it works, and what you can expect — no fluff.</p>
     <a href="javascript:void(0)" onclick="showPage('home');setTimeout(()=>document.getElementById('contact-anchor').scrollIntoView({behavior:'smooth'}),100)" class="btn btn-primary" style="margin-top:1.4rem;">Ask Us Directly <svg viewBox="0 0 14 14" fill="none" style="width:13px;height:13px;"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
   <div>
@@ -1723,7 +1723,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div>
     <div class="overline amber">Ready to start?</div>
     <h2 style="margin-top:1rem;">The Gap Between What You Know and What's Actually Happening Is Costing You More Than You Think.</h2>
-    <p class="cta-sub">A free PlanIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
+    <p class="cta-sub">A free Plan AIQ audit closes that gap. We visit your operation, map every data flow, quantify every problem, and hand you a written action plan. No commitment. Just clarity.</p>
   </div>
   <div class="cta-actions">
     <a href="javascript:void(0)" onclick="openMail('Free Audit Request','')" class="btn-tile">
@@ -1739,8 +1739,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
   <div class="footer-top">
     <div>
       <div class="footer-brand-row">
-        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#7A0000"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
-        <div class="footer-wordmark">Plan<span class="iq">IQ</span></div>
+        <div class="footer-mark"><svg width="32" height="32" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="7" fill="#991818"/><line x1="11" y1="10" x2="11" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="M11 10 Q21 10 21 17 Q21 24 11 24" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="18" x2="28" y2="34" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><circle cx="28" cy="12" r="2.2" fill="#ffffff"/></svg></div>
+        <div class="footer-wordmark">Plan<span class="aiq">AIQ</span></div>
       </div>
       <p class="footer-tagline-text">Insight to Action — Business Intelligence &amp; Analytics Consulting</p>
       <p class="footer-desc">Business intelligence and analytics consulting built for operations — serving manufacturing, retail, logistics, technology, construction, and energy businesses across Michigan and nationwide.</p>
@@ -1767,14 +1767,14 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <div>
       <div class="footer-col-title">Contact</div>
       <ul class="footer-links">
-        <li><a href="tel:8109379864">(810) 937-9864</a></li>
-        <li><a href="javascript:void(0)" onclick="openMail('PlanIQ Enquiry','')"><span class="__cf_email__" data-cfemail="ef86818980af9f838e81869ec18c8082">[email&#160;protected]</span></a></li>
+        <li id="footer-phone" style="transition:opacity .2s"><a href="tel:8109379864" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">(810) 937-9864</a></li>
+        <li><a href="mailto:info@planaiq.com?subject=Plan AIQ Enquiry" style="color:rgba(255,255,255,.36);" onmouseover="this.style.color='rgba(255,255,255,.82)'" onmouseout="this.style.color='rgba(255,255,255,.36)'">info@planaiq.com</a></li>
         <li><a href="javascript:void(0)">Port Huron, MI</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 PlanIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
+    <div class="footer-copy">© 2025 Plan AIQ Analytics &amp; Consulting. Built in <span>Michigan</span>.</div>
     <div class="footer-mono">Data Intelligence · Six Industries · Real Results</div>
   </div>
 </footer>
@@ -1790,7 +1790,7 @@ const INDUSTRIES = {
     tagline: "What's happening on your shop floor right now? Most plant managers can't answer that in real time.",
     desc: "We transform disconnected production data into real-time intelligence — giving plant managers, operations directors, and executives a single source of truth for every metric that matters.",
     img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"34%",label:"Avg reduction in operational costs"},{val:"$80K+",label:"Waste identified per first audit"},{val:"2wk",label:"To first live production dashboard"},{val:"99%",label:"System uptime with real-time alerting"}],
     services: [
       {icon:'<path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/>',title:"OEE & Downtime Dashboards",desc:"Track Overall Equipment Effectiveness in real time. Identify which machines, shifts, and processes are costing the most production time.",benefit:"Typically adds 15–25% capacity without capex"},
@@ -1812,7 +1812,7 @@ const INDUSTRIES = {
     tagline: "Your customers are telling you exactly what they want. Are you listening to the data?",
     desc: "We give retail and e-commerce businesses a complete view of sales performance, customer behaviour, and inventory health — so you can stock smarter, sell more, and retain longer.",
     img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"28%",label:"Average revenue uplift in Year 1"},{val:"3×",label:"ROI on analytics investment"},{val:"22%",label:"Reduction in overstock costs"},{val:"40%",label:"Improvement in repeat purchase rate"}],
     services: [
       {icon:'<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>',title:"Sales Performance Analytics",desc:"SKU-level revenue tracking, category performance, channel attribution, and margin analysis — updated daily.",benefit:"Identify your 20% of products driving 80% of profit"},
@@ -1834,7 +1834,7 @@ const INDUSTRIES = {
     tagline: "You're moving thousands of shipments. But do you know which ones are quietly bleeding margin?",
     desc: "We build the real-time visibility layer that logistics and supply chain businesses need to cut costs, optimise routes, and deliver on time — every time.",
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"18%",label:"Average reduction in fuel & route costs"},{val:"95%+",label:"On-time delivery achieved post-analytics"},{val:"30%",label:"Faster incident response with live tracking"},{val:"$200K+",label:"Average annual savings identified"}],
     services: [
       {icon:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>',title:"Fleet & Route Analytics",desc:"Real-time GPS tracking, route efficiency scoring, fuel consumption analysis, and idle-time reporting.",benefit:"Cut fuel costs by 12–18%"},
@@ -1856,7 +1856,7 @@ const INDUSTRIES = {
     tagline: "You're building with data every day. But are you using it to keep the customers you already have?",
     desc: "We help technology companies turn product usage data, customer behaviour, and growth metrics into the intelligence that reduces churn, drives expansion, and accelerates product decisions.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"32%",label:"Average churn reduction"},{val:"25%",label:"Increase in expansion MRR"},{val:"40%",label:"Reduction in CAC"},{val:"2wk",label:"To first live product dashboard"}],
     services: [
       {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Churn Prediction & Early Warning",desc:"Usage-pattern models that flag at-risk accounts 30–60 days before they churn.",benefit:"Reduce churn by 25–40%"},
@@ -1878,7 +1878,7 @@ const INDUSTRIES = {
     tagline: "Every project that runs over budget had the warning signs in the data. You just couldn't see them in time.",
     desc: "We give construction and real estate firms real-time project intelligence — from budget tracking and labour productivity to portfolio performance and pipeline forecasting.",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"22%",label:"Average reduction in project cost overruns"},{val:"30%",label:"Improvement in resource utilisation"},{val:"3×",label:"Faster project status reporting"},{val:"$100K+",label:"Typical first-year savings per project"}],
     services: [
       {icon:'<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',title:"Project Tracking Dashboards",desc:"Real-time status across every active project — budget vs actual, schedule variance, milestone completion, and risk flags.",benefit:"Eliminate end-of-month reporting surprises"},
@@ -1900,7 +1900,7 @@ const INDUSTRIES = {
     tagline: "An unmonitored asset doesn't just degrade — it fails at the worst possible moment.",
     desc: "We help energy and utilities organisations build the analytics infrastructure needed to monitor assets in real time, optimise energy consumption, automate compliance reporting, and reduce operational costs.",
     img: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1400&q=85&fit=crop",
-    color: "rgba(138,28,28,.6)",
+    color: "rgba(153,24,24,.6)",
     stats: [{val:"25%",label:"Avg reduction in energy waste"},{val:"40%",label:"Less time on manual compliance reports"},{val:"99.5%",label:"Asset uptime with predictive monitoring"},{val:"$180K+",label:"Average annual efficiency savings"}],
     services: [
       {icon:'<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',title:"Asset Health Monitoring",desc:"Real-time sensor data aggregation, anomaly detection, and failure prediction for generation assets, transformers, and pipelines.",benefit:"Reduce unplanned outages by 35–50%"},
@@ -1959,7 +1959,7 @@ function buildIndustryPage(key) {
   el.innerHTML = `
     <div class="ind-page-hero">
       <div class="ind-page-hero-img" style="background-image:url('${d.img}')"></div>
-      <div class="ind-page-hero-overlay" style="background:linear-gradient(160deg,rgba(10,15,30,.85) 0%,${d.color} 55%,rgba(15,31,46,.9) 100%)"></div>
+      <div class="ind-page-hero-overlay" style="background:linear-gradient(160deg,rgba(15,26,46,.85) 0%,${d.color} 55%,rgba(15,31,46,.9) 100%)"></div>
       <div class="ind-page-hero-body">
         <div class="ind-page-breadcrumb" onclick="showPage('home')">← Back to Home</div>
         <h1 class="ind-page-h1">${d.title}</h1>
@@ -1983,7 +1983,7 @@ function buildIndustryPage(key) {
       <div style="position:relative;z-index:1;">
         <div class="overline on-dark reveal" style="margin-bottom:1.4rem;">Common Challenges</div>
         <h2 class="headline on-dark reveal">What This Industry Is Losing Right Now — Without Analytics</h2>
-        <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">Every figure below is sourced from independent industry research. This is what the data says is happening in your sector — before companies like PlanIQ step in.</p>
+        <p class="prose on-dark reveal" style="max-width:560px;margin-top:1rem;">Every figure below is sourced from independent industry research. This is what the data says is happening in your sector — before companies like Plan AIQ step in.</p>
         <div class="chal-grid" style="margin-top:52px;">${challengesHTML}</div>
       </div>
     </section>
@@ -1992,7 +1992,7 @@ function buildIndustryPage(key) {
     <section class="ind-roi" style="background:var(--fog);padding:90px 5%;">
       <div class="overline reveal" style="margin-bottom:1.4rem;">ROI Estimator</div>
       <h2 class="headline reveal">What Could Analytics Be Worth to Your Business?</h2>
-      <p class="prose reveal" style="max-width:560px;margin-top:1rem;">Enter your numbers below. We'll calculate a conservative estimate of the annual value PlanIQ could unlock — based on industry-average recovery rates.</p>
+      <p class="prose reveal" style="max-width:560px;margin-top:1rem;">Enter your numbers below. We'll calculate a conservative estimate of the annual value Plan AIQ could unlock — based on industry-average recovery rates.</p>
       <div class="roi-wrap reveal" id="${roiId}" style="margin-top:52px;">
         <div class="roi-inputs">
           <div class="roi-field">
@@ -2021,7 +2021,7 @@ function buildIndustryPage(key) {
             <div class="roi-result-range" id="${roiId}_range"></div>
           </div>
           <div class="roi-breakdown" id="${roiId}_breakdown"></div>
-          <p class="roi-disclaimer">Estimates are based on industry-average recovery rates from published research. Actual results depend on your specific operation. A PlanIQ audit will give you a precise, costed figure.</p>
+          <p class="roi-disclaimer">Estimates are based on industry-average recovery rates from published research. Actual results depend on your specific operation. A Plan AIQ audit will give you a precise, costed figure.</p>
           <a href="javascript:void(0)" onclick="openMail('ROI Audit Request — ${d.title}','')" class="btn btn-primary" style="margin-top:1.2rem;display:inline-flex;align-items:center;gap:8px;">Verify My Number With a Free Audit ${svgArr}</a>
         </div>
       </div>
@@ -2065,7 +2065,7 @@ function buildIndustryPage(key) {
           <div class="roi-result-val" id="${roiId}_rts_total">—</div>
           <div class="roi-result-range" id="${roiId}_rts_hrs_saved"></div>
           <div class="roi-breakdown" id="${roiId}_rts_breakdown"></div>
-          <p class="roi-disclaimer">Based on your inputs. Assumes analytics eliminates the automatable portion entirely. A PlanIQ audit will identify exactly which reports can be automated and in what timeframe.</p>
+          <p class="roi-disclaimer">Based on your inputs. Assumes analytics eliminates the automatable portion entirely. A Plan AIQ audit will identify exactly which reports can be automated and in what timeframe.</p>
           <a href="javascript:void(0)" onclick="openMail('Reporting Automation Inquiry — ${d.title}','')" class="btn btn-primary" style="margin-top:1.2rem;display:inline-flex;align-items:center;gap:8px;">See What We Can Automate ${svgArr}</a>
         </div>
       </div>
@@ -2150,7 +2150,7 @@ function calcRts(id) {
 }
 
 /* ─── Chart.js renders (kept for home chart) ─── */
-const TEAL = '#8A1C1C', AMBER = '#f59e0b', SLATE = '#100C0C';
+const TEAL = '#991818', AMBER = '#f59e0b', SLATE = '#0F1A2E';
 const C = (id) => document.getElementById(id)?.getContext('2d');
 
 function renderHomeChart() {
@@ -2175,10 +2175,10 @@ function renderHomeChart() {
           tension: .4
         },
         {
-          label: 'With PlanIQ',
+          label: 'With Plan AIQ',
           data: withPlan,
           borderColor: TEAL,
-          backgroundColor: 'rgba(138,28,28,.15)',
+          backgroundColor: 'rgba(153,24,24,.15)',
           borderWidth: 2.5,
           pointRadius: 3,
           pointBackgroundColor: TEAL,
@@ -2194,7 +2194,7 @@ function renderHomeChart() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: 'rgba(10,15,30,.92)',
+          backgroundColor: 'rgba(15,26,46,.92)',
           titleColor: '#fff',
           bodyColor: 'rgba(255,255,255,.7)',
           borderColor: 'rgba(255,255,255,.1)',
@@ -2252,8 +2252,8 @@ function renderIndustryCharts(key, id1, id2) {
     data: {
       labels: d.line.labels,
       datasets: [
-        { label: 'Before PlanIQ', data: d.line.before, borderColor: '#d1d5db', backgroundColor: 'rgba(209,213,219,.1)', tension: .4, pointRadius: 3 },
-        { label: 'After PlanIQ',  data: d.line.after,  borderColor: TEAL,       backgroundColor: 'rgba(138,28,28,.08)', tension: .4, pointRadius: 4, fill: true }
+        { label: 'Before Plan AIQ', data: d.line.before, borderColor: '#d1d5db', backgroundColor: 'rgba(209,213,219,.1)', tension: .4, pointRadius: 3 },
+        { label: 'After Plan AIQ',  data: d.line.after,  borderColor: TEAL,       backgroundColor: 'rgba(153,24,24,.08)', tension: .4, pointRadius: 4, fill: true }
       ]
     },
     options: {
@@ -2364,14 +2364,25 @@ document.addEventListener('click', (e) => {
 });
 
 /* ─── openMail: works in file:// and https:// ─── */
+/* ─── Phone toggle ─── */
+var _phoneVisible = true;
+function togglePhone() {
+  _phoneVisible = !_phoneVisible;
+  var val = document.getElementById('phone-val');
+  var btn = document.getElementById('phone-toggle-btn');
+  var footerPhones = document.querySelectorAll('#footer-phone');
+  if (val) { val.style.opacity = _phoneVisible ? '1' : '0'; val.style.pointerEvents = _phoneVisible ? '' : 'none'; }
+  if (btn) btn.textContent = _phoneVisible ? 'hide' : 'show';
+  footerPhones.forEach(function(el) { el.style.opacity = _phoneVisible ? '1' : '0'; el.style.pointerEvents = _phoneVisible ? '' : 'none'; });
+}
+
+/* ─── Open mail — native OS mail client picker ─── */
 function openMail(subject, body) {
-  var s = encodeURIComponent(subject || 'PlanIQ Enquiry');
+  var s = encodeURIComponent(subject || 'Plan AIQ Enquiry');
   var b = encodeURIComponent(body || '');
-  var link = 'mailto:info@planiq.com?subject=' + s + (b ? '&body=' + b : '');
+  var link = 'mailto:info@planaiq.com?subject=' + s + (b ? '&body=' + b : '');
   var a = document.createElement('a');
   a.href = link;
-  a.setAttribute('target','_blank');
-  a.setAttribute('rel','noopener');
   document.body.appendChild(a);
   a.click();
   setTimeout(function(){ document.body.removeChild(a); }, 200);
@@ -2388,7 +2399,7 @@ function submitContactForm() {
   var message  = document.querySelector('.form textarea') ? document.querySelector('.form textarea').value : '';
   if (!name || !email) { alert('Please enter your name and email address.'); return; }
   var bodyText    = 'Name: ' + name + '\nCompany: ' + company + '\nPhone: ' + phone + '\nIndustry: ' + industry + '\n\nMessage:\n' + message;
-  var subjectText = 'PlanIQ Enquiry from ' + name + ' - ' + company;
+  var subjectText = 'Plan AIQ Enquiry from ' + name + ' - ' + company;
   openMail(subjectText, bodyText);
 }
 
