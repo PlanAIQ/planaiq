@@ -2410,7 +2410,7 @@ function showToast(msg, isError) {
    Worker handles POST /api/send-email
    Everything else serves static files.
 ══════════════════════════════════════════ */
-var WORKER_URL = '/api/send-email';
+var WORKER_URL = 'https://planaiq.infoplanaiq.workers.dev/api/send-email';
 
 async function sendEmail(formType, fields, onSuccess, onError) {
   try {
