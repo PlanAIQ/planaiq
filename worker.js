@@ -35,14 +35,18 @@ function validEmail(e) {
 }
 
 function corsHeaders(env, origin) {
-  const allowed = env.ALLOWED_ORIGIN || '';
+  const allowed = (env.ALLOWED_ORIGIN || '').trim();
+
+  /* Allow exact match, www variant, and non-www variant */
   const isAllowed =
+    !allowed ||                                                      /* no restriction set — allow all */
     origin === allowed ||
     origin === allowed.replace('https://', 'https://www.') ||
     origin === allowed.replace('https://www.', 'https://');
+
   return {
-    'Access-Control-Allow-Origin' : isAllowed ? origin : (allowed || '*'),
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Origin' : isAllowed ? (origin || '*') : allowed,
+    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type'                : 'application/json',
   };
