@@ -1,14 +1,19 @@
 /**
- * Plan AIQ — Cloudflare Worker
- * ══════════════════════════════════════════════════
- * wrangler.jsonc: run_worker_first: true
- * → Worker runs on EVERY request
- * → /api/send-email  → handles email sending
- * → /api/test        → diagnostic (GET in browser)
- * → everything else  → served from env.ASSETS
- * ══════════════════════════════════════════════════
- * Secrets set in Cloudflare Dashboard:
- *   RESEND_API_KEY, RECIPIENT_EMAIL, ALLOWED_ORIGIN
+ * Plan AIQ — Email API Worker
+ * ════════════════════════════
+ * This Worker handles ONLY API requests.
+ * The website (HTML/CSS) is served by Cloudflare Pages separately.
+ *
+ * Routes handled:
+ *   GET  /api/test        → diagnostic, confirm Worker + secrets are live
+ *   POST /api/send-email  → sends email via Resend
+ *   *    everything else  → 404 (Pages serves the actual website)
+ *
+ * Secrets — set in Cloudflare Dashboard:
+ *   Workers & Pages → planaiq → Settings → Variables and Secrets
+ *   RESEND_API_KEY   (Secret)
+ *   RECIPIENT_EMAIL  (Secret or Variable)
+ *   ALLOWED_ORIGIN   (Variable) = https://planaiq.co
  */
 
 const RATE_MAX  = 5;
@@ -34,26 +39,29 @@ function validEmail(e) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 }
 
-function corsHeaders(env, origin) {
-  const allowed = (env.ALLOWED_ORIGIN || '').trim();
-
-  /* Allow exact match, www variant, and non-www variant */
-  const isAllowed =
-    !allowed ||                                                      /* no restriction set — allow all */
-    origin === allowed ||
-    origin === allowed.replace('https://', 'https://www.') ||
-    origin === allowed.replace('https://www.', 'https://');
-
+function corsHeaders(origin) {
+  /* Allow planaiq.co and www.planaiq.co unconditionally.
+     The Worker is on contact.planaiq.co — same root domain, different subdomain.
+     We allow the specific origins that will call this Worker. */
+  const allowed = [
+    'https://planaiq.co',
+    'https://www.planaiq.co',
+    'https://contact.planaiq.co',
+  ];
+  const allow = allowed.includes(origin) ? origin : allowed[0];
   return {
-    'Access-Control-Allow-Origin' : isAllowed ? (origin || '*') : allowed,
+    'Access-Control-Allow-Origin' : allow,
     'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type'                : 'application/json',
   };
 }
 
-function json(body, status, headers) {
-  return new Response(JSON.stringify(body, null, 2), { status, headers });
+function json(body, status, origin) {
+  return new Response(JSON.stringify(body, null, 2), {
+    status,
+    headers: corsHeaders(origin),
+  });
 }
 
 /* ══════════════════════════════════════════
@@ -91,7 +99,7 @@ function buildHtml({ formType, name, email, phone, company, industry, message, t
 
   return `<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<head><meta charset="UTF-8"/>
 <title>${headline}</title></head>
 <body style="margin:0;padding:0;background:#f1f5f9;">
 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f1f5f9;padding:36px 16px;">
@@ -161,69 +169,66 @@ function buildText({ formType, name, email, phone, company, industry, message, t
 
 /* ══════════════════════════════════════════
    MAIN HANDLER
-   run_worker_first: true → this runs on
-   every single request before assets
 ══════════════════════════════════════════ */
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env) {
     const url    = new URL(request.url);
     const origin = request.headers.get('Origin') || '';
-    const hdrs   = corsHeaders(env, origin);
 
-    /* ── /api/test — diagnostic, works with GET in browser ── */
+    /* ── /api/test — diagnostic endpoint ── */
     if (url.pathname === '/api/test') {
       return new Response(JSON.stringify({
         worker        : 'RUNNING ✓',
         resend_key_set: !!env.RESEND_API_KEY,
         recipient_set : !!env.RECIPIENT_EMAIL,
         origin_set    : !!env.ALLOWED_ORIGIN,
-        allowed_origin: env.ALLOWED_ORIGIN || 'NOT SET — add in Cloudflare → Worker → Settings → Variables',
+        allowed_origin: env.ALLOWED_ORIGIN || 'NOT SET',
         request_origin: origin || 'direct browser visit',
         timestamp     : new Date().toISOString(),
-        next_step     : env.RESEND_API_KEY ? 'Secrets look good — try submitting the form' : 'RESEND_API_KEY is missing — add it in Cloudflare → Worker → Settings → Variables and Secrets',
+        status        : (!env.RESEND_API_KEY)
+          ? '❌ RESEND_API_KEY missing — add in Worker Settings → Variables and Secrets'
+          : '✅ All secrets loaded — Worker ready',
       }, null, 2), {
         status : 200,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
       });
     }
 
-    /* ── All non-API requests → serve static assets ── */
+    /* ── Only handle /api/* routes ── */
     if (!url.pathname.startsWith('/api/')) {
-      return env.ASSETS.fetch(request);
+      return new Response('Not found', { status: 404 });
     }
 
-    /* ── /api/send-email ── */
-
-    /* OPTIONS preflight */
+    /* ── OPTIONS preflight ── */
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: hdrs });
+      return new Response(null, { status: 204, headers: corsHeaders(origin) });
     }
 
-    /* POST only */
+    /* ── POST only ── */
     if (request.method !== 'POST') {
-      return json({ ok: false, error: 'Method not allowed.' }, 405, hdrs);
+      return json({ ok: false, error: 'Method not allowed.' }, 405, origin);
     }
 
-    /* Secrets check */
+    /* ── Secrets check ── */
     if (!env.RESEND_API_KEY) {
       return json({
         ok   : false,
-        error: 'RESEND_API_KEY not set — go to Cloudflare → Workers & Pages → planaiq → Settings → Variables and Secrets → add it',
-      }, 500, hdrs);
+        error: 'RESEND_API_KEY not configured. Go to: Cloudflare Dashboard → Workers & Pages → planaiq → Settings → Variables and Secrets → add RESEND_API_KEY as a Secret',
+      }, 500, origin);
     }
 
-    /* Rate limit */
+    /* ── Rate limit ── */
     const ip = request.headers.get('CF-Connecting-IP')
             || (request.headers.get('X-Forwarded-For') || '').split(',')[0].trim()
             || 'unknown';
     if (isRateLimited(ip)) {
-      return json({ ok: false, error: 'Too many submissions. Please try again in 15 minutes.' }, 429, hdrs);
+      return json({ ok: false, error: 'Too many submissions. Please try again in 15 minutes.' }, 429, origin);
     }
 
-    /* Parse body */
+    /* ── Parse body ── */
     let body;
     try { body = await request.json(); }
-    catch (_) { return json({ ok: false, error: 'Invalid request body.' }, 400, hdrs); }
+    catch (_) { return json({ ok: false, error: 'Invalid request body.' }, 400, origin); }
 
     const { formType = 'general', name, email, phone, company, industry, message } = body;
 
@@ -235,9 +240,9 @@ export default {
     const cleanMessage  = clean(message);
 
     if (!cleanName)
-      return json({ ok: false, error: 'Name is required.' }, 400, hdrs);
+      return json({ ok: false, error: 'Name is required.' }, 400, origin);
     if (!cleanEmail || !validEmail(cleanEmail))
-      return json({ ok: false, error: 'A valid email address is required.' }, 400, hdrs);
+      return json({ ok: false, error: 'A valid email address is required.' }, 400, origin);
 
     const isAudit   = formType === 'audit';
     const isConsult = formType === 'consultation';
@@ -258,7 +263,7 @@ export default {
       timestamp, ip,
     };
 
-    /* Call Resend */
+    /* ── Call Resend ── */
     let resendRes, resendBody;
     try {
       resendRes = await fetch('https://api.resend.com/emails', {
@@ -278,17 +283,14 @@ export default {
       });
       resendBody = await resendRes.json().catch(() => ({}));
     } catch (err) {
-      return json({ ok: false, error: `Network error reaching Resend: ${err.message}` }, 500, hdrs);
+      return json({ ok: false, error: `Network error: ${err.message}` }, 500, origin);
     }
 
     if (!resendRes.ok) {
       const detail = resendBody?.message || resendBody?.name || JSON.stringify(resendBody);
-      return json({
-        ok   : false,
-        error: `Resend rejected the request (${resendRes.status}): ${detail}`,
-      }, 500, hdrs);
+      return json({ ok: false, error: `Resend error (${resendRes.status}): ${detail}` }, 500, origin);
     }
 
-    return json({ ok: true, message: 'Email sent successfully.' }, 200, hdrs);
+    return json({ ok: true, message: 'Email sent successfully.' }, 200, origin);
   },
 };
