@@ -1351,7 +1351,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900;
     <h3>Send a Message</h3>
     <p class="contact-form-tagline">Tell us about your operation — we respond within 12 hours.</p>
     <div class="form">
-      <div class="form-row"><input class="fi" id="contact-name" type="text" placeholder="Your Name" autocomplete="name"/><input class="fi" type="text" placeholder="Company / Organization"/></div>
+      <div class="form-row"><input class="fi" id="contact-name" type="text" placeholder="Your Name" autocomplete="name" maxlength="50"/><input class="fi" type="text" placeholder="Company / Organization"/></div>
       <div class="form-row"><input class="fi" id="contact-email" type="email" placeholder="Email Address"/><input class="fi" type="tel" placeholder="Phone (optional)"/></div>
       <select class="fi">
         <option value="" disabled selected>Industry / Type of Business</option>
@@ -2449,6 +2449,18 @@ function showToast(msg, isError) {
 }
 
 /* ─── Field-level validation helpers ─── */
+/* ─── Name validation rules ─── */
+function validateName(val) {
+  val = (val || '').trim();
+  if (!val)            return 'Your name is required.';
+  if (val.length < 2)  return 'Name must be at least 2 characters.';
+  if (val.length > 50) return 'Name must be 50 characters or fewer.';
+  // Reject digits and common symbols
+  if (/[0-9@#$%^&*()\[\]{};:\\|<>?!+_=~`]/.test(val))
+    return 'Name cannot contain numbers or special symbols.';
+  return null;
+}
+
 function setFieldError(el, msg) {
   if (!el) return;
   el.classList.add('fi--error');
@@ -2471,10 +2483,6 @@ function setFieldError(el, msg) {
   }
   span.textContent = msg;
   span.style.display = 'block';
-  // Focus the first errored field in the form
-  if (!el.closest('form, .form, .audit-modal-body').querySelector('[aria-invalid="true"]:not(#' + el.id + ')')) {
-    el.focus();
-  }
 }
 
 function clearFieldError(el) {
@@ -2575,7 +2583,22 @@ function submitAuditModal() {
   var company = companyEl ? companyEl.value.trim() : '';
   var msg     = msgEl     ? msgEl.value.trim()     : '';
   var ftype   = typeEl    ? typeEl.value           : 'audit';
-  if (!name || !email) { showToast('Please enter your name and email address.', true); return; }
+  var emailRe2 = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var auditValid = true;
+  clearAllFieldErrors(m.querySelector('.audit-modal-body'));
+
+  var nameErr2 = validateName(name);
+  if (nameErr2) { setFieldError(nameEl, nameErr2); auditValid = false; }
+
+  if (!email) {
+    setFieldError(emailEl, 'Your email address is required.');
+    auditValid = false;
+  } else if (!emailRe2.test(email)) {
+    setFieldError(emailEl, 'Please enter a valid email address (e.g. you@company.com).');
+    auditValid = false;
+  }
+  if (!auditValid) return;
+
   var btn = m.querySelector('#audit-submit-btn');
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
   sendEmail(ftype, {
@@ -2616,8 +2639,9 @@ function submitContactForm() {
 
   clearAllFieldErrors(formScope);
 
-  if (!name) {
-    setFieldError(nameEl, 'Your name is required.');
+  var nameErr = validateName(name);
+  if (nameErr) {
+    setFieldError(nameEl, nameErr);
     valid = false;
   }
   if (!email) {
@@ -2677,10 +2701,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
   if (cName) {
     cName.addEventListener('blur', function() {
-      if (!this.value.trim()) setFieldError(this, 'Your name is required.');
-      else clearFieldError(this);
+      var e = validateName(this.value);
+      if (e) setFieldError(this, e); else clearFieldError(this);
     });
-    cName.addEventListener('input', function() { if (this.value.trim()) clearFieldError(this); });
+    cName.addEventListener('input', function() {
+      // Strip disallowed characters as user types
+      var sel = this.selectionStart;
+      var clean = this.value.replace(/[0-9@#$%^&*()\[\]{};:\\|<>?!+_=~`]/g, '');
+      if (clean !== this.value) { this.value = clean; try { this.setSelectionRange(sel - 1, sel - 1); } catch(e){} }
+      var err = validateName(this.value);
+      if (!err) clearFieldError(this);
+      else if (this.value.trim().length >= 1) setFieldError(this, err);
+    });
   }
   if (cEmail) {
     cEmail.addEventListener('blur', function() {
@@ -2706,10 +2738,17 @@ window.addEventListener('DOMContentLoaded', function() {
   var aEmail = document.getElementById('audit-email');
 
   if (aName) {
-    aName.addEventListener('input', function() { if (this.value.trim()) clearFieldError(this); });
     aName.addEventListener('blur', function() {
-      if (!this.value.trim()) setFieldError(this, 'Your name is required.');
-      else clearFieldError(this);
+      var e = validateName(this.value);
+      if (e) setFieldError(this, e); else clearFieldError(this);
+    });
+    aName.addEventListener('input', function() {
+      var sel = this.selectionStart;
+      var clean = this.value.replace(/[0-9@#$%^&*()\[\]{};:\\|<>?!+_=~`]/g, '');
+      if (clean !== this.value) { this.value = clean; try { this.setSelectionRange(sel - 1, sel - 1); } catch(e){} }
+      var err = validateName(this.value);
+      if (!err) clearFieldError(this);
+      else if (this.value.trim().length >= 1) setFieldError(this, err);
     });
   }
   if (aEmail) {
@@ -2802,7 +2841,7 @@ function closeSuccessPopup() {
       <input type="hidden" id="audit-modal-subject"/>
       <input type="hidden" id="audit-modal-formtype" value="audit"/>
       <div class="audit-form-row">
-        <input class="audit-fi" type="text" id="audit-name" placeholder="Your Name *" autocomplete="name"/>
+        <input class="audit-fi" type="text" id="audit-name" placeholder="Your Name *" autocomplete="name" maxlength="50"/>
         <input class="audit-fi" type="text" id="audit-company" placeholder="Company / Organization" autocomplete="organization"/>
       </div>
       <div class="audit-form-row">
